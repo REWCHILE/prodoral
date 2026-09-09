@@ -50,8 +50,10 @@ require_once __DIR__ . '/includes/header.php';
 <main id="main-content">
     <!-- Encabezado de la Landing Page con Video de Fondo y Reproductor Destacado -->
     <section class="hero-section" style="min-height: auto; padding: 75px 0 65px 0; position: relative; overflow: hidden;" id="hero">
-        <video class="hero-video-bg" autoplay muted loop playsinline poster="<?= BASE_URL ?>/assets/img/background-sellante-fugas-prodoral-chile.webp">
+        <img src="<?= BASE_URL ?>/assets/img/background-sellante-fugas-prodoral-chile.webp" alt="Sellado de Fugas de Gas con Prodoral R6-1 en Chile" class="hero-bg-img" width="1280" height="720" fetchpriority="high" decoding="async">
+        <video class="hero-video-bg d-none-mobile-video" autoplay muted loop playsinline preload="none" aria-hidden="true">
             <source src="<?= BASE_URL ?>/assets/videos/hero-video.mp4" type="video/mp4" media="(min-width: 768px)">
+            <track kind="captions" src="" label="Español" default>
         </video>
         <div class="hero-overlay"></div>
 
@@ -89,6 +91,7 @@ require_once __DIR__ . '/includes/header.php';
                     <video controls preload="none" poster="<?= BASE_URL ?>/assets/img/prodoral-r6-1-sellado-fugas-gas-chile.webp" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
                         <source src="<?= BASE_URL ?>/assets/videos/prodoral-r6-1-sellado-fuga-sin-romper.mp4" type="video/mp4">
                         <source src="<?= BASE_URL ?>/assets/videos/trabajo-2.mp4" type="video/mp4">
+                        <track kind="captions" src="" label="Español" default>
                         Su navegador no soporta reproducción de video HTML5.
                     </video>
                 </div>

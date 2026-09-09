@@ -1,17 +1,28 @@
 /**
  * Prodoral Chile - Funcionalidad JavaScript Interactiva
- * Manejo de navegación móvil, acordeón FAQ, efectos y tracking
+ * Alto rendimiento, cero reflows forzados, navegación accesible
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Sticky Header con efecto al scrollear
+    // 1. Sticky Header sin reflows (usando IntersectionObserver)
     const siteHeader = document.getElementById('siteHeader');
-    if (siteHeader) {
+    const sentinel = document.getElementById('topSentinel');
+
+    if (siteHeader && sentinel && 'IntersectionObserver' in window) {
+        const headerObserver = new IntersectionObserver((entries) => {
+            const isScrolled = !entries[0].isIntersecting;
+            siteHeader.classList.toggle('scrolled', isScrolled);
+        }, { threshold: 0 });
+        headerObserver.observe(sentinel);
+    } else if (siteHeader) {
+        let ticking = false;
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 30) {
-                siteHeader.classList.add('scrolled');
-            } else {
-                siteHeader.classList.remove('scrolled');
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    siteHeader.classList.toggle('scrolled', window.scrollY > 30);
+                    ticking = false;
+                });
+                ticking = true;
             }
         }, { passive: true });
     }
@@ -20,42 +31,33 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileToggle = document.getElementById('mobileMenuToggle');
     const mobileDrawer = document.getElementById('mobileDrawer');
     const mobileClose = document.getElementById('mobileDrawerClose');
-
-    // Crear overlay dinámico si no existe
-    let drawerOverlay = document.querySelector('.drawer-overlay');
-    if (!drawerOverlay) {
-        drawerOverlay = document.createElement('div');
-        drawerOverlay.className = 'drawer-overlay';
-        document.body.appendChild(drawerOverlay);
-    }
+    const drawerOverlay = document.getElementById('drawerOverlay');
 
     function openMobileMenu() {
-        if (mobileDrawer) {
-            mobileDrawer.classList.add('open');
-            mobileDrawer.setAttribute('aria-hidden', 'false');
-            mobileDrawer.removeAttribute('inert');
-            drawerOverlay.classList.add('active');
-            document.body.classList.add('menu-open');
-            document.body.style.overflow = 'hidden';
-            if (mobileToggle) {
-                mobileToggle.setAttribute('aria-expanded', 'true');
-                mobileToggle.classList.add('is-active');
-            }
+        if (!mobileDrawer) return;
+        mobileDrawer.classList.add('open');
+        mobileDrawer.setAttribute('aria-hidden', 'false');
+        mobileDrawer.removeAttribute('inert');
+        if (drawerOverlay) drawerOverlay.classList.add('active');
+        document.body.classList.add('menu-open');
+        document.body.style.overflow = 'hidden';
+        if (mobileToggle) {
+            mobileToggle.setAttribute('aria-expanded', 'true');
+            mobileToggle.classList.add('is-active');
         }
     }
 
     function closeMobileMenu() {
-        if (mobileDrawer) {
-            mobileDrawer.classList.remove('open');
-            mobileDrawer.setAttribute('aria-hidden', 'true');
-            mobileDrawer.setAttribute('inert', '');
-            drawerOverlay.classList.remove('active');
-            document.body.classList.remove('menu-open');
-            document.body.style.overflow = '';
-            if (mobileToggle) {
-                mobileToggle.setAttribute('aria-expanded', 'false');
-                mobileToggle.classList.remove('is-active');
-            }
+        if (!mobileDrawer) return;
+        mobileDrawer.classList.remove('open');
+        mobileDrawer.setAttribute('aria-hidden', 'true');
+        mobileDrawer.setAttribute('inert', '');
+        if (drawerOverlay) drawerOverlay.classList.remove('active');
+        document.body.classList.remove('menu-open');
+        document.body.style.overflow = '';
+        if (mobileToggle) {
+            mobileToggle.setAttribute('aria-expanded', 'false');
+            mobileToggle.classList.remove('is-active');
         }
     }
 
@@ -69,73 +71,64 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+
     if (mobileClose) {
         mobileClose.addEventListener('click', (e) => {
             e.stopPropagation();
             closeMobileMenu();
         });
     }
-    drawerOverlay.addEventListener('click', closeMobileMenu);
+
+    if (drawerOverlay) {
+        drawerOverlay.addEventListener('click', closeMobileMenu);
+    }
 
     // Cerrar menú si se hace click en un enlace interno del drawer
     if (mobileDrawer) {
         mobileDrawer.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                // Solo cerrar si no es enlace de llamada tel o whatsapp directo en nueva ventana
-                if (!link.getAttribute('href').startsWith('tel:') && !link.getAttribute('target')) {
+                const href = link.getAttribute('href') || '';
+                if (!href.startsWith('tel:') && !link.getAttribute('target')) {
                     closeMobileMenu();
                 }
             });
         });
     }
 
-    // Cerrar menú móvil al presionar tecla Escape
+    // Cerrar menú móvil al presionar Escape
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && mobileDrawer && mobileDrawer.classList.contains('open')) {
             closeMobileMenu();
         }
     });
 
-    // 3. Acordeón de Preguntas Frecuentes (FAQs)
+    // 3. Acordeón de Preguntas Frecuentes (FAQs) - Cero lectura geométrica en carga
     const faqItems = document.querySelectorAll('.faq-item');
-    faqItems.forEach((item, index) => {
+    faqItems.forEach(item => {
         const questionBtn = item.querySelector('.faq-question');
-        const answerPanel = item.querySelector('.faq-answer');
-
-        if (questionBtn && answerPanel) {
-            // Abrir el primer elemento por defecto
-            if (index === 0) {
-                item.classList.add('active');
-                answerPanel.style.maxHeight = answerPanel.scrollHeight + 'px';
-            }
-
+        if (questionBtn) {
             questionBtn.addEventListener('click', () => {
-                const isActive = item.classList.contains('active');
+                const isCurrentlyActive = item.classList.contains('active');
 
-                // Opcional: Cerrar los demás acordeones para mantener orden
+                // Cerrar otros acordeones
                 faqItems.forEach(otherItem => {
                     if (otherItem !== item && otherItem.classList.contains('active')) {
                         otherItem.classList.remove('active');
-                        const otherAnswer = otherItem.querySelector('.faq-answer');
-                        if (otherAnswer) otherAnswer.style.maxHeight = null;
+                        const otherBtn = otherItem.querySelector('.faq-question');
+                        if (otherBtn) otherBtn.setAttribute('aria-expanded', 'false');
                     }
                 });
 
-                // Alternar el actual
-                if (isActive) {
-                    item.classList.remove('active');
-                    answerPanel.style.maxHeight = null;
-                } else {
-                    item.classList.add('active');
-                    answerPanel.style.maxHeight = answerPanel.scrollHeight + 'px';
-                }
+                // Alternar estado
+                item.classList.toggle('active', !isCurrentlyActive);
+                questionBtn.setAttribute('aria-expanded', (!isCurrentlyActive).toString());
             });
         }
     });
 
-    // 4. Pausa de videos fuera del viewport para optimizar rendimiento de CPU/Batería
+    // 4. Pausa/Reproducción de videos con IntersectionObserver
     const videos = document.querySelectorAll('video');
-    if ('IntersectionObserver' in window) {
+    if ('IntersectionObserver' in window && videos.length > 0) {
         const videoObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 const video = entry.target;
@@ -149,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 }
             });
-        }, { threshold: 0.25 });
+        }, { threshold: 0.2 });
 
         videos.forEach(v => videoObserver.observe(v));
     }

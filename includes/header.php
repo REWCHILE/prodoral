@@ -60,6 +60,9 @@ $jsonLdSchema = $jsonLdSchema ?? get_main_schemas(get_homepage_faqs());
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 
+    <!-- Preload del Elemento LCP Crítico para Móvil (Fondo Hero) -->
+    <link rel="preload" as="image" href="<?= BASE_URL ?>/assets/img/background-sellante-fugas-prodoral-chile.webp" fetchpriority="high">
+
     <!-- CSS Crítico Antidesplazamiento (Zero CLS) -->
     <style>
         :root { --navy-900: #070d19; --navy-800: #0f172a; --primary: #059669; --primary-light: #10b981; }
@@ -67,10 +70,11 @@ $jsonLdSchema = $jsonLdSchema ?? get_main_schemas(get_homepage_faqs());
         .hero-section { position: relative; min-height: 80vh; background-color: #070d19; overflow: hidden; contain: paint layout; }
         .hero-overlay { position: absolute; inset: 0; background: radial-gradient(circle at 30% 30%, rgba(7, 13, 25, 0.75) 0%, rgba(7, 13, 25, 0.95) 100%); z-index: 2; }
         .mobile-drawer:not(.active) { visibility: hidden; pointer-events: none; }
+        .hero-bg-img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.35; z-index: 1; filter: brightness(0.8) contrast(1.1); pointer-events: none; }
     </style>
 
-    <!-- Estilos Principales -->
-    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/style.css?v=<?= filemtime(__DIR__ . '/../assets/css/style.css') ?: time() ?>">
+    <!-- Estilos Principales Minificados -->
+    <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/style.min.css?v=<?= filemtime(__DIR__ . '/../assets/css/style.min.css') ?: time() ?>">
 
     <!-- Datos Estructurados JSON-LD -->
     <?php if (!empty($jsonLdSchema)): ?>
@@ -80,6 +84,8 @@ $jsonLdSchema = $jsonLdSchema ?? get_main_schemas(get_homepage_faqs());
     <?php endif; ?>
 </head>
 <body>
+    <!-- Centinela para Sticky Header sin Reflows -->
+    <div id="topSentinel" style="position:absolute;top:0;left:0;height:30px;width:1px;pointer-events:none;" aria-hidden="true"></div>
 
     <!-- Barra Superior Informativa -->
     <aside class="top-bar" aria-label="Información de contacto rápido y urgencias de gas">
@@ -255,4 +261,7 @@ $jsonLdSchema = $jsonLdSchema ?? get_main_schemas(get_homepage_faqs());
                 </div>
             </div>
         </div>
+
+        <!-- Overlay Estático para Drawer (Cero Reflow en Carga) -->
+        <div class="drawer-overlay" id="drawerOverlay" aria-hidden="true"></div>
     </header>

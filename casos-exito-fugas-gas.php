@@ -44,6 +44,7 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="video-wrap">
                         <video controls preload="none" poster="<?= BASE_URL ?>/assets/img/prodoral-r6-1-sellado-fugas-gas-chile.webp">
                             <source src="<?= BASE_URL ?>/assets/videos/trabajo-2.mp4" type="video/mp4">
+                            <track kind="captions" src="" label="Español" default>
                         </video>
                     </div>
                     <div class="video-info">
@@ -57,6 +58,7 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="video-wrap">
                         <video controls preload="none" poster="<?= BASE_URL ?>/assets/img/manometro-digital.webp">
                             <source src="<?= BASE_URL ?>/assets/videos/video-3.mp4" type="video/mp4">
+                            <track kind="captions" src="" label="Español" default>
                         </video>
                     </div>
                     <div class="video-info">
@@ -70,6 +72,7 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="video-wrap">
                         <video controls preload="none" poster="<?= BASE_URL ?>/assets/img/trabajo-1.webp">
                             <source src="<?= BASE_URL ?>/assets/videos/video-testimonio-trabajo.mp4" type="video/mp4">
+                            <track kind="captions" src="" label="Español" default>
                         </video>
                     </div>
                     <div class="video-info">
@@ -83,6 +86,7 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="video-wrap">
                         <video controls preload="none" poster="<?= BASE_URL ?>/assets/img/prodoral-r6-1-sellado-fugas-gas-santiago.webp">
                             <source src="<?= BASE_URL ?>/assets/videos/prodoral-r6-1-sellado-fuga-sin-romper.mp4" type="video/mp4">
+                            <track kind="captions" src="" label="Español" default>
                         </video>
                     </div>
                     <div class="video-info">
@@ -96,6 +100,7 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="video-wrap">
                         <video controls preload="none" poster="<?= BASE_URL ?>/assets/img/background-sellante-fugas-prodoral-chile.webp">
                             <source src="<?= BASE_URL ?>/assets/videos/prodoral-r-6-prodoral-chile.mp4" type="video/mp4">
+                            <track kind="captions" src="" label="Español" default>
                         </video>
                     </div>
                     <div class="video-info">
@@ -109,6 +114,7 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="video-wrap">
                         <video controls preload="none" poster="<?= BASE_URL ?>/assets/img/manometro-digital.webp">
                             <source src="<?= BASE_URL ?>/assets/videos/video-manometro.mp4" type="video/mp4">
+                            <track kind="captions" src="" label="Español" default>
                         </video>
                     </div>
                     <div class="video-info">

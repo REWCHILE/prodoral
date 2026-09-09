@@ -135,7 +135,7 @@
         </a>
     </nav>
 
-    <!-- Scripts Principales -->
-    <script src="<?= BASE_URL ?>/assets/js/main.js?v=<?= filemtime(__DIR__ . '/../assets/js/main.js') ?: time() ?>"></script>
+    <!-- Scripts Principales con Carga Diferida (Non-blocking) -->
+    <script src="<?= BASE_URL ?>/assets/js/main.min.js?v=<?= filemtime(__DIR__ . '/../assets/js/main.min.js') ?: time() ?>" defer></script>
 </body>
 </html>

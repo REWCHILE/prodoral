@@ -21,8 +21,10 @@ require_once __DIR__ . '/includes/header.php';
 <main id="main-content">
     <!-- 1. Hero Section con Video de Fondo y Perfil del Experto -->
     <section class="hero-section" id="hero">
-        <video class="hero-video-bg" autoplay muted loop playsinline poster="<?= BASE_URL ?>/assets/img/background-sellante-fugas-prodoral-chile.webp">
+        <img src="<?= BASE_URL ?>/assets/img/background-sellante-fugas-prodoral-chile.webp" alt="Sellado de Fugas de Gas con Prodoral R6-1 en Chile" class="hero-bg-img" width="1280" height="720" fetchpriority="high" decoding="async">
+        <video class="hero-video-bg d-none-mobile-video" autoplay muted loop playsinline preload="none" aria-hidden="true">
             <source src="<?= BASE_URL ?>/assets/videos/hero-video.mp4" type="video/mp4" media="(min-width: 768px)">
+            <track kind="captions" src="" label="Español" default>
         </video>
         <div class="hero-overlay"></div>
 
@@ -200,7 +202,10 @@ require_once __DIR__ . '/includes/header.php';
 
                 <div class="about-media">
                     <div class="interactive-media-box">
-                        <img src="<?= BASE_URL ?>/assets/img/prodoral-r6-1-sellado-fugas-gas-santiago.webp" alt="Aplicación de Prodoral R6-1 en Santiago por Gasfiter SEC" width="600" height="500" loading="lazy" decoding="async">
+                        <picture>
+                            <source media="(max-width: 640px)" srcset="<?= BASE_URL ?>/assets/img/prodoral-r6-1-sellado-fugas-gas-santiago-sm.webp">
+                            <img src="<?= BASE_URL ?>/assets/img/prodoral-r6-1-sellado-fugas-gas-santiago.webp" alt="Aplicación de Prodoral R6-1 en Santiago por Gasfiter SEC" width="575" height="1066" loading="lazy" decoding="async">
+                        </picture>
                         <div class="media-badge-float">
                             <strong><i class="fa-solid fa-circle-check"></i> Sellado 100% Hermético Garantizado</strong>
                             <p>Procedimiento limpio, seguro y certificado para casas, departamentos, edificios y locales comerciales.</p>
@@ -489,6 +494,7 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="video-wrap">
                         <video controls preload="none" poster="<?= BASE_URL ?>/assets/img/prodoral-r6-1-sellado-fugas-gas-chile.webp">
                             <source src="<?= BASE_URL ?>/assets/videos/trabajo-2.mp4" type="video/mp4">
+                            <track kind="captions" src="" label="Español" default>
                             Su navegador no soporta reproducción de video.
                         </video>
                     </div>
@@ -503,6 +509,7 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="video-wrap">
                         <video controls preload="none" poster="<?= BASE_URL ?>/assets/img/manometro-digital.webp">
                             <source src="<?= BASE_URL ?>/assets/videos/video-3.mp4" type="video/mp4">
+                            <track kind="captions" src="" label="Español" default>
                             Su navegador no soporta reproducción de video.
                         </video>
                     </div>
@@ -517,6 +524,7 @@ require_once __DIR__ . '/includes/header.php';
                     <div class="video-wrap">
                         <video controls preload="none" poster="<?= BASE_URL ?>/assets/img/trabajo-1.webp">
                             <source src="<?= BASE_URL ?>/assets/videos/video-testimonio-trabajo.mp4" type="video/mp4">
+                            <track kind="captions" src="" label="Español" default>
                             Su navegador no soporta reproducción de video.
                         </video>
                     </div>
@@ -566,7 +574,7 @@ require_once __DIR__ . '/includes/header.php';
 
             <div class="faq-accordion-wrap">
                 <?php foreach ($faqs as $i => $faq): ?>
-                <div class="faq-item" id="faq-item-<?= $i + 1 ?>">
+                <div class="faq-item<?= $i === 0 ? ' active' : '' ?>" id="faq-item-<?= $i + 1 ?>">
                     <button type="button" class="faq-question" aria-expanded="<?= $i === 0 ? 'true' : 'false' ?>">
                         <span><?= htmlspecialchars($faq['question']) ?></span>
                         <span class="faq-chevron"><i class="fa-solid fa-chevron-down"></i></span>
