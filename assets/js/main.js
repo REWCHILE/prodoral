@@ -146,4 +146,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
         videos.forEach(v => videoObserver.observe(v));
     }
+
+    // 5. Carga diferida del video hero en desktop tras el primer render (0 contención LCP, 0 CLS)
+    if (window.innerWidth >= 768) {
+        const bgVideo = document.querySelector('video[data-hero-video]');
+        if (bgVideo) {
+            const startBgVideo = () => {
+                const source = bgVideo.querySelector('source[data-src]');
+                if (source && !source.src) {
+                    source.src = source.dataset.src;
+                    bgVideo.load();
+                    bgVideo.play().catch(() => {});
+                }
+            };
+            if (document.readyState === 'complete') {
+                setTimeout(startBgVideo, 300);
+            } else {
+                window.addEventListener('load', () => setTimeout(startBgVideo, 300), { once: true });
+            }
+        }
+    }
 });

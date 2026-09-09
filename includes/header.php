@@ -52,6 +52,7 @@ $jsonLdSchema = $jsonLdSchema ?? get_main_schemas(get_homepage_faqs());
     <link rel="preload" href="<?= BASE_URL ?>/assets/fonts/outfit.woff2" as="font" type="font/woff2" crossorigin>
 
     <link rel="preload" href="<?= BASE_URL ?>/assets/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="<?= BASE_URL ?>/assets/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- Preload del Elemento LCP Crítico para Móvil (Fondo Hero) -->
     <link rel="preload" as="image" href="<?= BASE_URL ?>/assets/img/background-sellante-fugas-prodoral-chile.webp" fetchpriority="high">

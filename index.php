@@ -22,8 +22,8 @@ require_once __DIR__ . '/includes/header.php';
     <!-- 1. Hero Section con Video de Fondo y Perfil del Experto -->
     <section class="hero-section" id="hero">
         <img src="<?= BASE_URL ?>/assets/img/background-sellante-fugas-prodoral-chile.webp" alt="Sellado de Fugas de Gas con Prodoral R6-1 en Chile" class="hero-bg-img" width="1280" height="720" fetchpriority="high" decoding="async">
-        <video class="hero-video-bg d-none-mobile-video" autoplay muted loop playsinline preload="none" aria-hidden="true">
-            <source src="<?= BASE_URL ?>/assets/videos/hero-video.mp4" type="video/mp4" media="(min-width: 768px)">
+        <video class="hero-video-bg" width="1280" height="720" muted loop playsinline preload="none" aria-hidden="true" data-hero-video>
+            <source data-src="<?= BASE_URL ?>/assets/videos/hero-video.mp4" type="video/mp4" media="(min-width: 768px)">
             <track kind="captions" src="" label="Español" default>
         </video>
         <div class="hero-overlay"></div>
