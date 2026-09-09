@@ -11,8 +11,7 @@ $pageSlug = 'casos-exito-fugas-gas';
 $ogImage = BASE_URL . '/assets/img/prodoral-r6-1-sellado-fugas-gas-santiago.png';
 
 require_once __DIR__ . '/includes/header.php';
-?>
-
+?><main id="main-content">
     <!-- Encabezado de Página -->
     <section style="background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%); color: var(--text-white); padding: 70px 0 50px 0; text-align: center;">
         <div class="container">
@@ -43,12 +42,12 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Video 1 -->
                 <div class="video-card">
                     <div class="video-wrap">
-                        <video controls preload="metadata" poster="<?= BASE_URL ?>/assets/img/prodoral-r6-1-sellado-fugas-gas-chile.png">
+                        <video controls preload="none" poster="<?= BASE_URL ?>/assets/img/prodoral-r6-1-sellado-fugas-gas-chile.webp">
                             <source src="<?= BASE_URL ?>/assets/videos/trabajo-2.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="video-info">
-                        <h4>Inyección de Sellante Prodoral R6-1</h4>
+                        <h3>Inyección de Sellante Prodoral R6-1</h3>
                         <p>Procedimiento de bombeo a presión en cañerías embutidas en departamento de Santiago.</p>
                     </div>
                 </div>
@@ -56,12 +55,12 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Video 2 -->
                 <div class="video-card">
                     <div class="video-wrap">
-                        <video controls preload="metadata" poster="<?= BASE_URL ?>/assets/img/manometro-digital.jpeg">
+                        <video controls preload="none" poster="<?= BASE_URL ?>/assets/img/manometro-digital.webp">
                             <source src="<?= BASE_URL ?>/assets/videos/video-3.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="video-info">
-                        <h4>Prueba de Hermeticidad Instrumental</h4>
+                        <h3>Prueba de Hermeticidad Instrumental</h3>
                         <p>Control de presión con manómetro digital de precisión certificando cero pérdida de gas.</p>
                     </div>
                 </div>
@@ -69,25 +68,25 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Video 3 -->
                 <div class="video-card">
                     <div class="video-wrap">
-                        <video controls preload="metadata" poster="<?= BASE_URL ?>/assets/img/trabajo-1.jpeg">
+                        <video controls preload="none" poster="<?= BASE_URL ?>/assets/img/trabajo-1.webp">
                             <source src="<?= BASE_URL ?>/assets/videos/video-testimonio-trabajo.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="video-info">
-                        <h4>Testimonio y Entrega de Trabajo</h4>
-                        <p>Restitución inmediata del suministro de gas sin haber roto una sola baldosa ni pared.</p>
+                        <h3>Testimonio de Rehabilitación de Suministro</h3>
+                        <p>Cliente satisfecho tras recuperar el gas en el mismo día sin haber roto sus muros.</p>
                     </div>
                 </div>
 
                 <!-- Video 4 -->
                 <div class="video-card">
                     <div class="video-wrap">
-                        <video controls preload="metadata" poster="<?= BASE_URL ?>/assets/img/prodoral-r6-1-sellado-fugas-gas-santiago.png">
+                        <video controls preload="none" poster="<?= BASE_URL ?>/assets/img/prodoral-r6-1-sellado-fugas-gas-santiago.webp">
                             <source src="<?= BASE_URL ?>/assets/videos/prodoral-r6-1-sellado-fuga-sin-romper.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="video-info">
-                        <h4>Sellado No Destructivo en Casa Residencial</h4>
+                        <h3>Sellado No Destructivo en Casa Residencial</h3>
                         <p>Tratamiento de red completa de cobre con múltiples microfugas en uniones roscadas.</p>
                     </div>
                 </div>
@@ -95,12 +94,12 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Video 5 -->
                 <div class="video-card">
                     <div class="video-wrap">
-                        <video controls preload="metadata" poster="<?= BASE_URL ?>/assets/img/background-sellante-fugas-prodoral-chile.png">
+                        <video controls preload="none" poster="<?= BASE_URL ?>/assets/img/background-sellante-fugas-prodoral-chile.webp">
                             <source src="<?= BASE_URL ?>/assets/videos/prodoral-r-6-prodoral-chile.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="video-info">
-                        <h4>Aplicación de Prodoral Chile en Edificio</h4>
+                        <h3>Aplicación de Prodoral Chile en Edificio</h3>
                         <p>Recuperación de columna matriz de gas para habilitación de Sello Verde ante la SEC.</p>
                     </div>
                 </div>
@@ -108,12 +107,12 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Video 6 -->
                 <div class="video-card">
                     <div class="video-wrap">
-                        <video controls preload="metadata" poster="<?= BASE_URL ?>/assets/img/manometro-digital.jpeg">
+                        <video controls preload="none" poster="<?= BASE_URL ?>/assets/img/manometro-digital.webp">
                             <source src="<?= BASE_URL ?>/assets/videos/video-manometro.mp4" type="video/mp4">
                         </video>
                     </div>
                     <div class="video-info">
-                        <h4>Comprobación Final a 150 mbar</h4>
+                        <h3>Comprobación Final a 150 mbar</h3>
                         <p>Demostración práctica de estanqueidad total durante 15 minutos continuos de testeo.</p>
                     </div>
                 </div>
@@ -134,27 +133,27 @@ require_once __DIR__ . '/includes/header.php';
 
             <div class="media-gallery-grid">
                 <div class="photo-card">
-                    <img src="<?= BASE_URL ?>/assets/img/trabajo-1.jpeg" alt="Conexión de válvulas para purga de gas">
+                    <img src="<?= BASE_URL ?>/assets/img/trabajo-1.webp" alt="Conexión de válvulas para purga de gas" width="400" height="300" loading="lazy">
                     <div class="photo-caption">Conexión de Válvulas de Purga en Red Interior</div>
                 </div>
                 <div class="photo-card">
-                    <img src="<?= BASE_URL ?>/assets/img/trabajo-4.jpeg" alt="Inyección de Prodoral R6-1 en nicho de gas">
+                    <img src="<?= BASE_URL ?>/assets/img/trabajo-4.webp" alt="Inyección de Prodoral R6-1 en nicho de gas" width="400" height="300" loading="lazy">
                     <div class="photo-caption">Inyección en Nicho y Cañerías Principales</div>
                 </div>
                 <div class="photo-card">
-                    <img src="<?= BASE_URL ?>/assets/img/trabajo-5.jpeg" alt="Acoples y mangueras de presión">
+                    <img src="<?= BASE_URL ?>/assets/img/trabajo-5.webp" alt="Acoples y mangueras de presión" width="400" height="300" loading="lazy">
                     <div class="photo-caption">Acoples Rápidos y Mangueras de Alta Presión</div>
                 </div>
                 <div class="photo-card">
-                    <img src="<?= BASE_URL ?>/assets/img/trabajo-6.jpeg" alt="Inspección de red de gas">
+                    <img src="<?= BASE_URL ?>/assets/img/trabajo-6.webp" alt="Inspección de red de gas" width="400" height="300" loading="lazy">
                     <div class="photo-caption">Inspección de Artefactos y Calefones</div>
                 </div>
                 <div class="photo-card">
-                    <img src="<?= BASE_URL ?>/assets/img/trabajo-7.jpeg" alt="Equipamiento móvil">
+                    <img src="<?= BASE_URL ?>/assets/img/trabajo-7.webp" alt="Equipamiento móvil" width="400" height="300" loading="lazy">
                     <div class="photo-caption">Equipamiento Neumático Completo</div>
                 </div>
                 <div class="photo-card">
-                    <img src="<?= BASE_URL ?>/assets/img/nuestros moviles.jpeg" alt="Móviles de Prodoral Chile">
+                    <img src="<?= BASE_URL ?>/assets/img/nuestros moviles.webp" alt="Móviles de Prodoral Chile" width="400" height="300" loading="lazy">
                     <div class="photo-caption">Móviles Equipados para Atención de Urgencia</div>
                 </div>
             </div>
@@ -178,5 +177,6 @@ require_once __DIR__ . '/includes/header.php';
             </div>
         </div>
     </section>
+</main>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>

@@ -44,7 +44,7 @@ if (strpos($host, 'prodoral.cl') !== false) {
 
 // Rutas de Documentos y Medios Clave
 define('PRODORAL_PDF_URL', BASE_URL . '/assets/Prodoral-1.pdf');
-define('EXPERT_PHOTO_URL', BASE_URL . '/assets/img/domingo-plaza.png');
+define('EXPERT_PHOTO_URL', BASE_URL . '/assets/img/domingo-plaza.webp');
 define('SEC_QR_URL', BASE_URL . '/assets/img/sec-qr-hd.png');
 
 // Navegación Principal del Sitio (URLs limpias sin .php)

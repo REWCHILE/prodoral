@@ -18,10 +18,11 @@ $jsonLdSchema = get_main_schemas($faqs);
 require_once __DIR__ . '/includes/header.php';
 ?>
 
+<main id="main-content">
     <!-- 1. Hero Section con Video de Fondo y Perfil del Experto -->
     <section class="hero-section" id="hero">
-        <video class="hero-video-bg" autoplay muted loop playsinline poster="<?= BASE_URL ?>/assets/img/background-sellante-fugas-prodoral-chile.png">
-            <source src="<?= BASE_URL ?>/assets/videos/hero-video.mp4" type="video/mp4">
+        <video class="hero-video-bg" autoplay muted loop playsinline poster="<?= BASE_URL ?>/assets/img/background-sellante-fugas-prodoral-chile.webp">
+            <source src="<?= BASE_URL ?>/assets/videos/hero-video.mp4" type="video/mp4" media="(min-width: 768px)">
         </video>
         <div class="hero-overlay"></div>
 
@@ -90,7 +91,7 @@ require_once __DIR__ . '/includes/header.php';
                     <span>INSTALADOR SEC AUTORIZADO</span>
                 </div>
                 <div class="hero-expert-img-wrap">
-                    <img src="<?= EXPERT_PHOTO_URL ?>" alt="Domingo Isain Plaza Caamaño - Gasfiter Certificado SEC" class="hero-expert-img">
+                    <img src="<?= EXPERT_PHOTO_URL ?>" alt="Domingo Isain Plaza Caamaño - Gasfiter Certificado SEC" class="hero-expert-img" width="160" height="160" fetchpriority="high">
                     <span class="hero-expert-online-dot" title="Domingo Plaza disponible para emergencias de gas"></span>
                 </div>
                 <h2 class="hero-expert-name"><?= EXPERT_NAME ?></h2>
@@ -160,28 +161,28 @@ require_once __DIR__ . '/includes/header.php';
                         <div class="feature-item">
                             <div class="feature-icon-wrap"><i class="fa-solid fa-house-chimney-crack"></i></div>
                             <div class="feature-text">
-                                <h4>Cero Destrucción en su Propiedad</h4>
+                                <h3>Cero Destrucción en su Propiedad</h3>
                                 <p>El sellante ingresa en forma líquida por la tubería existente, recorre todo el trazado y sella las uniones con pérdidas sin necesidad de albañilería ni escombros.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon-wrap"><i class="fa-solid fa-shield-virus"></i></div>
                             <div class="feature-text">
-                                <h4>Resistente a Vibraciones y al Envejecimiento</h4>
+                                <h3>Resistente a Vibraciones y al Envejecimiento</h3>
                                 <p>Una vez polimerizado con secado térmico controlado, el producto forma una película elástica permanente que resiste movimientos sísmicos y cambios térmicos.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon-wrap"><i class="fa-solid fa-leaf"></i></div>
                             <div class="feature-text">
-                                <h4>Inocuo y Amigable con el Medio Ambiente</h4>
+                                <h3>Inocuo y Amigable con el Medio Ambiente</h3>
                                 <p>Formulado en base acuosa sin solventes orgánicos tóxicos. Es 100% no inflamable y no emite vapores nocivos ni deja olores en el hogar.</p>
                             </div>
                         </div>
                         <div class="feature-item">
                             <div class="feature-icon-wrap"><i class="fa-solid fa-certificate"></i></div>
                             <div class="feature-text">
-                                <h4>Norma Europea DIN EN 13090 y DVGW G 624</h4>
+                                <h3>Norma Europea DIN EN 13090 y DVGW G 624</h3>
                                 <p>Aprobado y certificado bajo el registro internacional DIN-DVGW NG-5153 AR 0634 para presiones de trabajo en gas natural y GLP.</p>
                             </div>
                         </div>
@@ -199,7 +200,7 @@ require_once __DIR__ . '/includes/header.php';
 
                 <div class="about-media">
                     <div class="interactive-media-box">
-                        <img src="<?= BASE_URL ?>/assets/img/prodoral-r6-1-sellado-fugas-gas-santiago.png" alt="Aplicación de Prodoral R6-1 en Santiago por Gasfiter SEC" width="600" height="500">
+                        <img src="<?= BASE_URL ?>/assets/img/prodoral-r6-1-sellado-fugas-gas-santiago.webp" alt="Aplicación de Prodoral R6-1 en Santiago por Gasfiter SEC" width="600" height="500" loading="lazy" decoding="async">
                         <div class="media-badge-float">
                             <strong><i class="fa-solid fa-circle-check"></i> Sellado 100% Hermético Garantizado</strong>
                             <p>Procedimiento limpio, seguro y certificado para casas, departamentos, edificios y locales comerciales.</p>
@@ -215,7 +216,7 @@ require_once __DIR__ . '/includes/header.php';
                         <i class="fa-solid fa-file-pdf"></i>
                     </div>
                     <div class="pdf-banner-text">
-                        <h4>Ficha Técnica Oficial y Certificación Alemana Prodoral R6-1</h4>
+                        <h3>Ficha Técnica Oficial y Certificación Alemana Prodoral R6-1</h3>
                         <p>Descargue el dossier técnico original de TIB Chemicals AG (Alemania): protocolo de hermeticidad DIN EN 13090, registro DVGW NG-5153 y aprobación de seguridad para redes de gas.</p>
                     </div>
                 </div>
@@ -486,13 +487,13 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Video 1: Procedimiento de Inyección -->
                 <div class="video-card">
                     <div class="video-wrap">
-                        <video controls preload="metadata" poster="<?= BASE_URL ?>/assets/img/prodoral-r6-1-sellado-fugas-gas-chile.png">
+                        <video controls preload="none" poster="<?= BASE_URL ?>/assets/img/prodoral-r6-1-sellado-fugas-gas-chile.webp">
                             <source src="<?= BASE_URL ?>/assets/videos/trabajo-2.mp4" type="video/mp4">
                             Su navegador no soporta reproducción de video.
                         </video>
                     </div>
                     <div class="video-info">
-                        <h4>Inyección de Prodoral R6-1 en Terreno</h4>
+                        <h3>Inyección de Prodoral R6-1 en Terreno</h3>
                         <p>Conexión de mangueras de presión y llenado de la red de gas interior sin romper superficies.</p>
                     </div>
                 </div>
@@ -500,13 +501,13 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Video 2: Prueba con Manómetro -->
                 <div class="video-card">
                     <div class="video-wrap">
-                        <video controls preload="metadata" poster="<?= BASE_URL ?>/assets/img/manometro-digital.jpeg">
+                        <video controls preload="none" poster="<?= BASE_URL ?>/assets/img/manometro-digital.webp">
                             <source src="<?= BASE_URL ?>/assets/videos/video-3.mp4" type="video/mp4">
                             Su navegador no soporta reproducción de video.
                         </video>
                     </div>
                     <div class="video-info">
-                        <h4>Verificación de Hermeticidad Manométrica</h4>
+                        <h3>Verificación de Hermeticidad Manométrica</h3>
                         <p>Control exacto a 150 mbar demostrando la eliminación completa de las pérdidas de gas.</p>
                     </div>
                 </div>
@@ -514,32 +515,32 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Video 3: Testimonio / Resultado Final -->
                 <div class="video-card">
                     <div class="video-wrap">
-                        <video controls preload="metadata" poster="<?= BASE_URL ?>/assets/img/trabajo-1.jpeg">
+                        <video controls preload="none" poster="<?= BASE_URL ?>/assets/img/trabajo-1.webp">
                             <source src="<?= BASE_URL ?>/assets/videos/video-testimonio-trabajo.mp4" type="video/mp4">
                             Su navegador no soporta reproducción de video.
                         </video>
                     </div>
                     <div class="video-info">
-                        <h4>Resultado Final en Comunidad</h4>
+                        <h3>Resultado Final en Comunidad</h3>
                         <p>Prueba exitosa y rehabilitación inmediata de gas en departamento con Sello Verde recuperado.</p>
                     </div>
                 </div>
 
                 <!-- Foto 1: Manómetro Digital -->
                 <div class="photo-card">
-                    <img src="<?= BASE_URL ?>/assets/img/manometro-digital.jpeg" alt="Manómetro digital de precisión para fugas de gas">
+                    <img src="<?= BASE_URL ?>/assets/img/manometro-digital.webp" alt="Manómetro digital de precisión para fugas de gas" width="400" height="300" loading="lazy">
                     <div class="photo-caption">Manometría Digital de Alta Precisión</div>
                 </div>
 
                 <!-- Foto 2: Móvil y Equipamiento -->
                 <div class="photo-card">
-                    <img src="<?= BASE_URL ?>/assets/img/nuestros moviles.jpeg" alt="Móviles de atención técnica rápida en Santiago y regiones">
+                    <img src="<?= BASE_URL ?>/assets/img/nuestros moviles.webp" alt="Móviles de atención técnica rápida en Santiago y regiones" width="400" height="300" loading="lazy">
                     <div class="photo-caption">Unidades Móviles Equipadas para Urgencias</div>
                 </div>
 
                 <!-- Foto 3: Gasfiter Certificado en Acción -->
                 <div class="photo-card">
-                    <img src="<?= BASE_URL ?>/assets/img/gasfiter-certificado-sec-deteccion-fugas-gas-prodoral-r6-1.png" alt="Gasfiter SEC aplicando sellante Prodoral">
+                    <img src="<?= BASE_URL ?>/assets/img/gasfiter-certificado-sec-deteccion-fugas-gas-prodoral-r6-1.webp" alt="Gasfiter SEC aplicando sellante Prodoral" width="400" height="300" loading="lazy">
                     <div class="photo-caption">Gasfiter Certificado SEC en Acción</div>
                 </div>
             </div>
@@ -662,5 +663,6 @@ require_once __DIR__ . '/includes/header.php';
             </div>
         </div>
     </section>
+</main>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>

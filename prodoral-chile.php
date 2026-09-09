@@ -8,11 +8,12 @@ require_once __DIR__ . '/includes/config.php';
 $pageTitle = 'Sobre Nosotros | Gasfiter Certificado SEC Especialista en Prodoral R6-1';
 $pageDesc = 'Conozca la trayectoria de Domingo Isain Plaza Caamaño, Gasfiter Certificado SEC con más de 40 años de experiencia y pionero en Chile en la aplicación del sellante alemán Prodoral R6-1.';
 $pageSlug = 'prodoral-chile';
-$ogImage = BASE_URL . '/assets/img/SEC-DOMINGO.png';
+$ogImage = BASE_URL . '/assets/img/SEC-DOMINGO.webp';
 
 require_once __DIR__ . '/includes/header.php';
 ?>
 
+<main id="main-content">
     <!-- Encabezado de Página -->
     <section style="background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%); color: var(--text-white); padding: 70px 0 50px 0; text-align: center;">
         <div class="container">
@@ -140,5 +141,6 @@ require_once __DIR__ . '/includes/header.php';
             </div>
         </div>
     </section>
+</main>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>

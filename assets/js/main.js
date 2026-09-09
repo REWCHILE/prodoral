@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (mobileDrawer) {
             mobileDrawer.classList.add('open');
             mobileDrawer.setAttribute('aria-hidden', 'false');
+            mobileDrawer.removeAttribute('inert');
             drawerOverlay.classList.add('active');
             document.body.classList.add('menu-open');
             document.body.style.overflow = 'hidden';
@@ -47,6 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (mobileDrawer) {
             mobileDrawer.classList.remove('open');
             mobileDrawer.setAttribute('aria-hidden', 'true');
+            mobileDrawer.setAttribute('inert', '');
             drawerOverlay.classList.remove('active');
             document.body.classList.remove('menu-open');
             document.body.style.overflow = '';

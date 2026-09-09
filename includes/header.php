@@ -43,17 +43,31 @@ $jsonLdSchema = $jsonLdSchema ?? get_main_schemas(get_homepage_faqs());
     <meta name="twitter:data1" content="<?= htmlspecialchars(EXPERT_NAME) ?>">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="<?= BASE_URL ?>/assets/img/logotipo.png">
-    <link rel="apple-touch-icon" href="<?= BASE_URL ?>/assets/img/logotipo.png">
+    <link rel="icon" type="image/webp" href="<?= BASE_URL ?>/assets/img/logotipo.webp">
+    <link rel="apple-touch-icon" href="<?= BASE_URL ?>/assets/img/logotipo.webp">
     <meta name="theme-color" content="#064e3b">
 
-    <!-- Google Fonts: Inter & Outfit -->
+    <!-- Preconnect Orígenes Críticos -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
 
-    <!-- Iconos FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Google Fonts con Font-Display Swap y Carga Optimizada -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@600;700;800&display=swap"></noscript>
+
+    <!-- Iconos FontAwesome No Bloqueante -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
+    <!-- CSS Crítico Antidesplazamiento (Zero CLS) -->
+    <style>
+        :root { --navy-900: #070d19; --navy-800: #0f172a; --primary: #059669; --primary-light: #10b981; }
+        body { margin: 0; background: #070d19; color: #f8fafc; font-family: 'Inter', system-ui, -apple-system, sans-serif; }
+        .hero-section { position: relative; min-height: 80vh; background-color: #070d19; overflow: hidden; contain: paint layout; }
+        .hero-overlay { position: absolute; inset: 0; background: radial-gradient(circle at 30% 30%, rgba(7, 13, 25, 0.75) 0%, rgba(7, 13, 25, 0.95) 100%); z-index: 2; }
+        .mobile-drawer:not(.active) { visibility: hidden; pointer-events: none; }
+    </style>
 
     <!-- Estilos Principales -->
     <link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/style.css?v=<?= filemtime(__DIR__ . '/../assets/css/style.css') ?: time() ?>">
@@ -103,7 +117,7 @@ $jsonLdSchema = $jsonLdSchema ?? get_main_schemas(get_homepage_faqs());
         <div class="container header-container">
             <!-- Logo Institucional -->
             <a href="<?= BASE_URL ?>/" class="site-logo" title="<?= SITE_NAME ?> - Inicio">
-                <img src="<?= BASE_URL ?>/assets/img/logotipo.png" alt="Logotipo Prodoral Chile - Sellado de Fugas de Gas" width="180" height="60">
+                <img src="<?= BASE_URL ?>/assets/img/logotipo.webp" alt="Logotipo Prodoral Chile - Sellado de Fugas de Gas" width="180" height="60" fetchpriority="high">
                 <div class="logo-text">
                     <span class="logo-title">PRODORAL CHILE</span>
                     <span class="logo-subtitle">Gasfiter Certificado SEC • Prodoral R6-1</span>
@@ -139,10 +153,10 @@ $jsonLdSchema = $jsonLdSchema ?? get_main_schemas(get_homepage_faqs());
         </div>
 
         <!-- Menú Móvil Desplegable Premium -->
-        <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+        <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true" inert>
             <div class="drawer-header">
                 <div class="drawer-brand">
-                    <img src="<?= BASE_URL ?>/assets/img/logotipo.png" alt="Prodoral Chile" class="drawer-logo" width="130" height="42">
+                    <img src="<?= BASE_URL ?>/assets/img/logotipo.webp" alt="Prodoral Chile" class="drawer-logo" width="130" height="42" loading="lazy">
                     <span class="drawer-sec-tag"><i class="fa-solid fa-shield-halved"></i> SEC Clase 3</span>
                 </div>
                 <button type="button" class="drawer-close-btn" id="mobileDrawerClose" aria-label="Cerrar menú">

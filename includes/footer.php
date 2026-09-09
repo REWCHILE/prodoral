@@ -10,7 +10,7 @@
                 <!-- Columna 1: Presentación y Certificaciones -->
                 <div class="footer-col footer-col-brand">
                     <div class="footer-logo">
-                        <img src="<?= BASE_URL ?>/assets/img/logotipo.png" alt="Prodoral Chile Logo" width="160" height="55">
+                        <img src="<?= BASE_URL ?>/assets/img/logotipo.webp" alt="Prodoral Chile Logo" width="160" height="55" loading="lazy">
                         <span class="footer-brand-text">PRODORAL CHILE</span>
                     </div>
                     <p class="footer-description">

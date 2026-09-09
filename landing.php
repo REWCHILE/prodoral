@@ -47,10 +47,11 @@ $reviews = get_verified_reviews_data();
 require_once __DIR__ . '/includes/header.php';
 ?>
 
+<main id="main-content">
     <!-- Encabezado de la Landing Page con Video de Fondo y Reproductor Destacado -->
     <section class="hero-section" style="min-height: auto; padding: 75px 0 65px 0; position: relative; overflow: hidden;" id="hero">
-        <video class="hero-video-bg" autoplay muted loop playsinline poster="<?= BASE_URL ?>/assets/img/background-sellante-fugas-prodoral-chile.png">
-            <source src="<?= BASE_URL ?>/assets/videos/hero-video.mp4" type="video/mp4">
+        <video class="hero-video-bg" autoplay muted loop playsinline poster="<?= BASE_URL ?>/assets/img/background-sellante-fugas-prodoral-chile.webp">
+            <source src="<?= BASE_URL ?>/assets/videos/hero-video.mp4" type="video/mp4" media="(min-width: 768px)">
         </video>
         <div class="hero-overlay"></div>
 
@@ -85,7 +86,7 @@ require_once __DIR__ . '/includes/header.php';
             <!-- Reproductor de Video Destacado en el Hero -->
             <div style="max-width: 820px; margin: 0 auto; background: rgba(7, 13, 25, 0.9); border: 2px solid rgba(16, 185, 129, 0.45); border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 35px rgba(16, 185, 129, 0.25); backdrop-filter: blur(14px);">
                 <div style="position: relative; padding-bottom: 56.25%; height: 0; background: #000;">
-                    <video controls preload="metadata" poster="<?= BASE_URL ?>/assets/img/prodoral-r6-1-sellado-fugas-gas-chile.png" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                    <video controls preload="none" poster="<?= BASE_URL ?>/assets/img/prodoral-r6-1-sellado-fugas-gas-chile.webp" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
                         <source src="<?= BASE_URL ?>/assets/videos/prodoral-r6-1-sellado-fuga-sin-romper.mp4" type="video/mp4">
                         <source src="<?= BASE_URL ?>/assets/videos/trabajo-2.mp4" type="video/mp4">
                         Su navegador no soporta reproducción de video HTML5.
@@ -252,5 +253,6 @@ require_once __DIR__ . '/includes/header.php';
             </div>
         </div>
     </section>
+</main>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>

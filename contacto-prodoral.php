@@ -51,6 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 require_once __DIR__ . '/includes/header.php';
 ?>
 
+<main id="main-content">
     <!-- Encabezado de Página -->
     <section style="background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%); color: var(--text-white); padding: 70px 0 50px 0; text-align: center;">
         <div class="container">
@@ -275,5 +276,6 @@ require_once __DIR__ . '/includes/header.php';
             </div>
         </div>
     </section>
+</main>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>

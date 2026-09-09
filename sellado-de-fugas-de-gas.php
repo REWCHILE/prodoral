@@ -13,6 +13,7 @@ $ogImage = BASE_URL . '/assets/img/prodoral-r6-1-sellado-fugas-gas-chile.png';
 require_once __DIR__ . '/includes/header.php';
 ?>
 
+<main id="main-content">
     <!-- Encabezado de Página -->
     <section style="background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%); color: var(--text-white); padding: 70px 0 50px 0; text-align: center;">
         <div class="container">
@@ -70,14 +71,14 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                 </div>
                 <div>
-                    <img src="<?= BASE_URL ?>/assets/img/prodoral-r6-1-sellado-fugas-gas-chile.png" alt="Sellado de fugas de gas con Prodoral R6-1 en Chile" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+                    <img src="<?= BASE_URL ?>/assets/img/prodoral-r6-1-sellado-fugas-gas-chile.webp" alt="Sellado de fugas de gas con Prodoral R6-1 en Chile" width="600" height="400" loading="lazy" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
                 </div>
             </div>
 
             <!-- Servicio 2: Prodoral H Calefacción -->
             <div class="two-col-grid" id="fugas-calefaccion" style="margin-bottom: 70px;">
                 <div>
-                    <img src="<?= BASE_URL ?>/assets/img/sellador-prodoral-1.png" alt="Sellado de calefacción con Prodoral H" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+                    <img src="<?= BASE_URL ?>/assets/img/sellador-prodoral-1.webp" alt="Sellado de calefacción con Prodoral H" width="600" height="400" loading="lazy" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
                 </div>
                 <div>
                     <div class="section-tag tag-gold">Circuitos Hidrónicos</div>
@@ -127,7 +128,7 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                 </div>
                 <div>
-                    <img src="<?= BASE_URL ?>/assets/img/manometro-digital.jpeg" alt="Manómetro digital de precisión para pruebas de hermeticidad de gas" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
+                    <img src="<?= BASE_URL ?>/assets/img/manometro-digital.webp" alt="Manómetro digital de precisión para pruebas de hermeticidad de gas" width="600" height="400" loading="lazy" style="border-radius: var(--radius-lg); box-shadow: var(--shadow-md);">
                 </div>
             </div>
         </div>
@@ -202,5 +203,6 @@ require_once __DIR__ . '/includes/header.php';
             </div>
         </div>
     </section>
+</main>
 
 <?php require_once __DIR__ . '/includes/footer.php'; ?>
