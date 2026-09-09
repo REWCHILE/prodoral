@@ -105,7 +105,7 @@
                     <a href="<?= BASE_URL ?>/casos-exito-fugas-gas">Proyectos</a>
                     <a href="<?= BASE_URL ?>/contacto-prodoral">Contacto</a>
                     <a href="<?= SEC_LICENSE_URL ?>" target="_blank" rel="noopener noreferrer" style="color: var(--accent-gold);">Licencia SEC</a>
-                    <a href="<?= PRODORAL_PDF_URL ?>" target="_blank" rel="noopener noreferrer" style="color: var(--text-white);">Ficha Prodoral (PDF)</a>
+                    <a href="<?= PRODORAL_PDF_URL ?>" target="_blank" rel="noopener noreferrer">Ficha Prodoral (PDF)</a>
                 </div>
             </div>
         </div>
