@@ -52,7 +52,7 @@
     --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 
-    --transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1);
     --radius-sm: 8px;
     --radius-md: 14px;
     --radius-lg: 22px;
@@ -981,6 +981,19 @@ body.menu-open .floating-whatsapp-wrap {
     }
 }
 
+.hero-bg-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.35;
+    z-index: 1;
+    filter: brightness(0.8) contrast(1.1);
+    pointer-events: none;
+}
+
 .hero-overlay {
     position: absolute;
     top: 0;
@@ -989,6 +1002,7 @@ body.menu-open .floating-whatsapp-wrap {
     height: 100%;
     background: radial-gradient(circle at 30% 30%, rgba(7, 13, 25, 0.75) 0%, rgba(7, 13, 25, 0.95) 100%);
     z-index: 2;
+    pointer-events: none;
 }
 
 .hero-container {
@@ -1634,7 +1648,7 @@ body.menu-open .floating-whatsapp-wrap {
     width: 100%;
     max-width: 250px;
     text-align: center;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
 .sec-qr-card:hover {
@@ -2255,10 +2269,23 @@ body.menu-open .floating-whatsapp-wrap {
 .footer-bottom-links {
     display: flex;
     gap: 16px;
+    flex-wrap: wrap;
+}
+
+.footer-bottom-links a {
+    color: #cbd5e1;
+    font-size: 0.85rem;
+    font-weight: 500;
 }
 
 .footer-bottom-links a:hover {
-    color: var(--text-white);
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .footer-bottom {
+        padding-bottom: 95px;
+    }
 }
 
 /* 17. Botón Flotante de WhatsApp */
