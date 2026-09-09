@@ -182,8 +182,41 @@ function get_main_schemas($faqs = [], $customPageData = null) {
             "priceCurrency" => "CLP",
             "price" => "190000",
             "priceValidUntil" => "2027-12-31",
+            "validFrom" => "2024-01-01",
             "availability" => "https://schema.org/InStock",
             "url" => $productUrl,
+            "hasMerchantReturnPolicy" => [
+                "@type" => "MerchantReturnPolicy",
+                "applicableCountry" => "CL",
+                "returnPolicyCategory" => "https://schema.org/MerchantReturnNotPermitted"
+            ],
+            "shippingDetails" => [
+                "@type" => "OfferShippingDetails",
+                "shippingRate" => [
+                    "@type" => "MonetaryAmount",
+                    "value" => "0",
+                    "currency" => "CLP"
+                ],
+                "shippingDestination" => [
+                    "@type" => "DefinedRegion",
+                    "addressCountry" => "CL"
+                ],
+                "deliveryTime" => [
+                    "@type" => "ShippingDeliveryTime",
+                    "handlingTime" => [
+                        "@type" => "QuantitativeValue",
+                        "minValue" => 0,
+                        "maxValue" => 1,
+                        "unitCode" => "DAY"
+                    ],
+                    "transitTime" => [
+                        "@type" => "QuantitativeValue",
+                        "minValue" => 0,
+                        "maxValue" => 1,
+                        "unitCode" => "DAY"
+                    ]
+                ]
+            ],
             "seller" => [
                 "@type" => "LocalBusiness",
                 "name" => "Prodoral Chile"
