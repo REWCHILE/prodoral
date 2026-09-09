@@ -62,11 +62,18 @@ require_once __DIR__ . '/includes/header.php';
                 <i class="fa-solid fa-certificate"></i> <?= htmlspecialchars($pageData['badge']) ?>
             </div>
 
-            <!-- Insignia de Calificación de Google en la Cabecera -->
-            <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.08); padding: 6px 18px; border-radius: var(--radius-full); margin-bottom: 18px; border: 1px solid rgba(245, 158, 11, 0.35); backdrop-filter: blur(8px);">
-                <i class="fa-solid fa-star" style="color: #f59e0b;"></i>
-                <span style="font-weight: 800; color: #f59e0b; font-size: 0.95rem;">4.9 / 5.0</span>
-                <span style="color: var(--text-muted); font-size: 0.85rem;">(3.428 Reseñas Verificadas de Clientes en Google)</span>
+            <!-- Insignia de Calificación de Google y Garantía Oficial en la Cabecera -->
+            <div style="display: flex; justify-content: center; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 18px;">
+                <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(255, 255, 255, 0.08); padding: 6px 16px; border-radius: var(--radius-full); border: 1px solid rgba(245, 158, 11, 0.35); backdrop-filter: blur(8px);">
+                    <i class="fa-solid fa-star" style="color: #f59e0b;"></i>
+                    <span style="font-weight: 800; color: #f59e0b; font-size: 0.92rem;">4.9 / 5.0</span>
+                    <span style="color: var(--text-muted); font-size: 0.82rem;">(3.428 Reseñas Verificadas)</span>
+                </div>
+                <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(16, 185, 129, 0.15); padding: 6px 16px; border-radius: var(--radius-full); border: 1px solid rgba(16, 185, 129, 0.4); backdrop-filter: blur(8px);">
+                    <i class="fa-solid fa-shield-halved" style="color: #34d399;"></i>
+                    <span style="font-weight: 800; color: #34d399; font-size: 0.92rem;">Garantía Escrita 3 Años</span>
+                    <span style="color: var(--text-light); font-size: 0.82rem;">• Vida Útil +30 Años</span>
+                </div>
             </div>
 
             <h1 style="font-size: 2.85rem; font-weight: 900; line-height: 1.2; max-width: 950px; margin: 0 auto 18px auto; color: var(--text-white);">
@@ -76,13 +83,21 @@ require_once __DIR__ . '/includes/header.php';
                 <?= htmlspecialchars($pageData['subtitle']) ?>
             </p>
 
-            <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 35px;">
+            <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 24px;">
                 <a href="tel:<?= PHONE_RAW ?>" class="btn btn-emergency pulse-btn">
                     <i class="fa-solid fa-phone-volume"></i> Llamar al <?= PHONE_DISPLAY ?>
                 </a>
                 <a href="<?= WHATSAPP_URL ?>" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
                     <i class="fa-brands fa-whatsapp"></i> Cotizar por WhatsApp
                 </a>
+            </div>
+
+            <!-- Fila de Confianza y Garantía -->
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 30px; font-size: 0.88rem; color: var(--text-light);">
+                <div><i class="fa-solid fa-shield-halved" style="color: var(--primary-light);"></i> <strong>Garantía Escrita 3 Años</strong></div>
+                <div><i class="fa-solid fa-check-circle" style="color: var(--primary-light);"></i> <strong>Duración +30 Años</strong> (Indefinida)</div>
+                <div><i class="fa-solid fa-certificate" style="color: var(--primary-light);"></i> Gasfiter Certificado SEC</div>
+                <div><i class="fa-solid fa-gauge-high" style="color: var(--primary-light);"></i> Test Hermeticidad 150 mbar</div>
             </div>
 
             <!-- Reproductor de Video Destacado en el Hero -->

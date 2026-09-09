@@ -296,16 +296,20 @@ h1, h2, h3, h4, h5, h6 {
     background-color: var(--navy-900);
     color: var(--text-light);
     font-size: 0.85rem;
-    padding: 8px 0;
+    height: 38px;
+    padding: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+    contain: layout size;
 }
 
 .top-bar-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
+    flex-wrap: nowrap;
+    height: 38px;
+    gap: 12px;
 }
 
 .top-bar-badge {
@@ -313,6 +317,8 @@ h1, h2, h3, h4, h5, h6 {
     align-items: center;
     gap: 8px;
     font-size: 0.825rem;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .pulse-dot {
@@ -333,7 +339,9 @@ h1, h2, h3, h4, h5, h6 {
 .top-bar-contact {
     display: flex;
     align-items: center;
-    gap: 18px;
+    gap: 16px;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .top-bar-link {
@@ -342,6 +350,7 @@ h1, h2, h3, h4, h5, h6 {
     gap: 6px;
     color: var(--text-light);
     font-weight: 500;
+    white-space: nowrap;
 }
 
 .top-bar-link:hover {
@@ -355,10 +364,11 @@ h1, h2, h3, h4, h5, h6 {
 .top-bar-schedule {
     color: var(--text-muted);
     font-size: 0.8rem;
+    white-space: nowrap;
 }
 
 @media (max-width: 900px) {
-    .d-none-mobile { display: none; }
+    .d-none-mobile { display: none !important; }
 }
 
 /* 6. Header & Navbar */
@@ -369,6 +379,7 @@ h1, h2, h3, h4, h5, h6 {
     position: sticky;
     top: 0;
     z-index: 1000;
+    contain: layout;
     transition: var(--transition);
 }
 
@@ -393,7 +404,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .site-logo img {
     height: 48px;
-    width: auto;
+    width: 38.4px;
+    aspect-ratio: 96 / 120;
     object-fit: contain;
 }
 
@@ -588,7 +600,8 @@ body.menu-open .floating-whatsapp-wrap {
 
 .drawer-logo {
     height: 38px;
-    width: auto;
+    width: 30.4px;
+    aspect-ratio: 96 / 120;
     object-fit: contain;
     filter: brightness(1.1);
 }

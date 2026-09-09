@@ -234,6 +234,10 @@ function get_homepage_faqs() {
             'answer' => 'Prodoral R6-1 es una dispersión polimérica alemana desarrollada por TIB Chemicals AG certificada bajo norma DIN-DVGW NG-5153 y DIN EN 13090. Se introduce de forma líquida bajo presión en el interior de la cañería de gas; al recorrer la instalación, penetra en las uniones roscadas y microfisuras, secando con un soplador térmico para crear una junta elástica permanente, hermética y resistente a vibraciones, todo sin picar ni demoler un solo muro o piso.'
         ],
         [
+            'question' => '¿Cuál es la garantía del trabajo de sellado y cuánto dura Prodoral R6-1?',
+            'answer' => 'El servicio cuenta con Garantía Escrita de 3 Años por efectos de sellado, otorgada y firmada por Domingo Isain Plaza Caamaño, Gasfiter Certificado SEC Clase 3. Adicionalmente, la duración de la junta polimérica alemana es INDEFINIDA, con una vida útil comprobada de más de 30 años en redes de gas europeas y chilenas sin deteriorarse ni perder elasticidad.'
+        ],
+        [
             'question' => '¿Por qué es fundamental que la aplicación sea realizada por Domingo Isain Plaza Caamaño?',
             'answer' => 'Domingo Isain Plaza Caamaño es Gasfiter Instalador Autorizado por la Superintendencia de Electricidad y Combustibles (SEC), certificado por ChileValora y especialista acreditado en la técnica Prodoral R6-1 con más de 40 años de experiencia. La normativa chilena e internacional exige que este procedimiento sea ejecutado exclusivamente por instaladores calificados con equipamiento neumático de precisión, garantizando seguridad absoluta y validez legal ante las empresas distribuidoras de gas.'
         ],

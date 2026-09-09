@@ -68,8 +68,12 @@ require_once __DIR__ . '/includes/header.php';
 
                 <div class="hero-trust-row">
                     <div class="trust-item">
+                        <i class="fa-solid fa-shield-halved"></i>
+                        <span><strong>Garantía Escrita 3 Años</strong></span>
+                    </div>
+                    <div class="trust-item">
                         <i class="fa-solid fa-check-circle"></i>
-                        <span>Certificación SEC Activa</span>
+                        <span><strong>Duración +30 Años</strong> (Indefinida)</span>
                     </div>
                     <div class="trust-item">
                         <i class="fa-solid fa-certificate"></i>
@@ -77,11 +81,7 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                     <div class="trust-item">
                         <i class="fa-solid fa-gauge-high"></i>
-                        <span>Prueba de Hermeticidad a 150 mbar</span>
-                    </div>
-                    <div class="trust-item">
-                        <i class="fa-solid fa-truck-fast"></i>
-                        <span>Santiago y Regiones</span>
+                        <span>Prueba a 150 mbar</span>
                     </div>
                 </div>
             </div>
@@ -99,10 +99,10 @@ require_once __DIR__ . '/includes/header.php';
                 <h2 class="hero-expert-name"><?= EXPERT_NAME ?></h2>
                 <p class="hero-expert-title"><?= EXPERT_TITLE ?></p>
                 <div class="hero-expert-chips">
+                    <span class="chip" style="background: rgba(16, 185, 129, 0.18); border-color: rgba(16, 185, 129, 0.45); color: #34d399; font-weight: 700;"><i class="fa-solid fa-shield-halved"></i> Garantía 3 Años por Escrito</span>
                     <span class="chip"><i class="fa-solid fa-award"></i> 40+ Años Experiencia</span>
                     <span class="chip"><i class="fa-solid fa-id-card"></i> Instalador Clase 3 SEC</span>
-                    <span class="chip"><i class="fa-solid fa-check-double"></i> Certificado ChileValora</span>
-                    <span class="chip"><i class="fa-solid fa-flask"></i> Aplicador Prodoral R6-1</span>
+                    <span class="chip"><i class="fa-solid fa-flask"></i> Duración Indefinida (+30 Años)</span>
                 </div>
 
                 <!-- Botón Oficial de Verificación SEC -->
@@ -125,24 +125,24 @@ require_once __DIR__ . '/includes/header.php';
     </section>
 
     <!-- 2. Barra de Estadísticas & Logros -->
-    <section class="stats-bar" aria-label="Indicadores de experiencia y confianza">
+    <section class="stats-bar" aria-label="Indicadores de experiencia, garantía y confianza">
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item">
-                    <div class="stat-number">40+</div>
-                    <div class="stat-label">Años Solucionando Fugas de Gas</div>
+                    <div class="stat-number">3 AÑOS</div>
+                    <div class="stat-label">Garantía Escrita por Efectos de Sellado</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">+30 AÑOS</div>
+                    <div class="stat-label">Duración Indefinida Comprobada</div>
                 </div>
                 <div class="stat-item">
                     <div class="stat-number">100%</div>
                     <div class="stat-label">Sin Romper Muros, Pisos ni Losas</div>
                 </div>
                 <div class="stat-item">
-                    <div class="stat-number">150 <span style="font-size: 1.5rem;">mbar</span></div>
-                    <div class="stat-label">Pruebas de Hermeticidad Normadas</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">1 DÍA</div>
-                    <div class="stat-label">Restablecimiento Rápido de Suministro</div>
+                    <div class="stat-number">40+</div>
+                    <div class="stat-label">Años Solucionando Fugas de Gas SEC</div>
                 </div>
             </div>
         </div>
@@ -188,6 +188,13 @@ require_once __DIR__ . '/includes/header.php';
                                 <p>Aprobado y certificado bajo el registro internacional DIN-DVGW NG-5153 AR 0634 para presiones de trabajo en gas natural y GLP.</p>
                             </div>
                         </div>
+                        <div class="feature-item">
+                            <div class="feature-icon-wrap" style="background: rgba(16, 185, 129, 0.15); color: #10b981;"><i class="fa-solid fa-shield-halved"></i></div>
+                            <div class="feature-text">
+                                <h3>Garantía Escrita de 3 Años y Duración Indefinida (+30 Años)</h3>
+                                <p>Cada servicio de sellado incluye <strong>Garantía Formal por Escrito de 3 Años</strong> por efectos de sellado. Su formulación alemana no se degrada en contacto con el gas y tiene una <strong>durabilidad comprobada superior a 30 años</strong> en redes interiores.</p>
+                            </div>
+                        </div>
                     </div>
 
                     <div style="margin-top: 30px; display: flex; flex-wrap: wrap; gap: 14px;">
@@ -207,8 +214,8 @@ require_once __DIR__ . '/includes/header.php';
                             <img src="<?= BASE_URL ?>/assets/img/prodoral-r6-1-sellado-fugas-gas-santiago.webp" alt="Aplicación de Prodoral R6-1 en Santiago por Gasfiter SEC" width="575" height="1066" loading="lazy" decoding="async">
                         </picture>
                         <div class="media-badge-float">
-                            <strong><i class="fa-solid fa-circle-check"></i> Sellado 100% Hermético Garantizado</strong>
-                            <p>Procedimiento limpio, seguro y certificado para casas, departamentos, edificios y locales comerciales.</p>
+                            <strong><i class="fa-solid fa-circle-check"></i> Garantía Escrita de 3 Años • Duración +30 Años</strong>
+                            <p>Procedimiento limpio, seguro y certificado por Domingo Plaza para casas, departamentos, comunidades y empresas.</p>
                         </div>
                     </div>
                 </div>
@@ -343,8 +350,8 @@ require_once __DIR__ . '/includes/header.php';
                 <article class="point-card">
                     <div class="point-number">10</div>
                     <div class="point-content">
-                        <h3>Garantía Técnica y Recuperación Inmediata de Sello Verde</h3>
-                        <p>Solución efectiva para cortes de suministro por Sello Rojo o Amarillo de Metrogas, Lipigas, Abastible o Gasco, entregando los informes técnicos requeridos por las entidades certificadoras.</p>
+                        <h3>Garantía Escrita de 3 Años y Duración Indefinida (+30 Años)</h3>
+                        <p>Cada trabajo cuenta con garantía legal y técnica por escrito de 3 años por efectos de sellado. Además, el polímero alemán posee una vida útil indefinida superior a 30 años sin degradación, permitiendo recuperar de inmediato el Sello Verde de la SEC tras cortes de Metrogas, Lipigas, Abastible o Gasco.</p>
                     </div>
                 </article>
             </div>

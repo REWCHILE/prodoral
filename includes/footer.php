@@ -25,6 +25,14 @@
                             <i class="fa-solid fa-file-pdf"></i>
                             <span>Ficha Prodoral PDF</span>
                         </a>
+                        <div class="cert-pill" style="border-color: rgba(16, 185, 129, 0.45); color: #34d399; font-weight: 700;">
+                            <i class="fa-solid fa-shield-halved"></i>
+                            <span>Garantía Escrita 3 Años</span>
+                        </div>
+                        <div class="cert-pill">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                            <span>Duración +30 Años</span>
+                        </div>
                         <div class="cert-pill">
                             <i class="fa-solid fa-award"></i>
                             <span>Norma DIN-DVGW</span>

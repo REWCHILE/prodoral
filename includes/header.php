@@ -84,7 +84,7 @@ echo $styleCss . "\n" . $faCss;
         <div class="container top-bar-inner">
             <div class="top-bar-badge">
                 <span class="pulse-dot"></span>
-                <strong>Urgencias y Fugas de Gas SEC:</strong> Atención en Santiago y Regiones
+                <strong>Urgencias SEC:</strong> 24/7 Santiago y Regiones
             </div>
             <div class="top-bar-contact">
                 <a href="tel:<?= PHONE_RAW ?>" class="top-bar-link" title="Llamar a Domingo Plaza">
@@ -93,7 +93,7 @@ echo $styleCss . "\n" . $faCss;
                 </a>
                 <a href="<?= WHATSAPP_URL ?>" target="_blank" rel="noopener noreferrer" class="top-bar-link top-bar-wsp" title="Consultar por WhatsApp">
                     <i class="fa-brands fa-whatsapp"></i>
-                    <span>WhatsApp Directo</span>
+                    <span>WhatsApp</span>
                 </a>
                 <a href="<?= SEC_LICENSE_URL ?>" target="_blank" rel="noopener noreferrer" class="top-bar-link d-none-mobile" style="color: var(--accent-gold); font-weight: 700;" title="Verificar Licencia de Domingo Plaza en la SEC">
                     <i class="fa-solid fa-certificate"></i>
@@ -101,10 +101,10 @@ echo $styleCss . "\n" . $faCss;
                 </a>
                 <a href="<?= PRODORAL_PDF_URL ?>" target="_blank" rel="noopener noreferrer" class="top-bar-link d-none-mobile" title="Descargar Ficha Técnica Oficial de Prodoral R6-1 en PDF">
                     <i class="fa-solid fa-file-pdf" style="color: #f87171;"></i>
-                    <span>Ficha Técnica PDF</span>
+                    <span>Ficha PDF</span>
                 </a>
                 <span class="top-bar-schedule d-none-mobile">
-                    <i class="fa-regular fa-clock"></i> <?= SCHEDULE_WEEKDAYS ?>
+                    <i class="fa-regular fa-clock"></i> 24/7 Emergencias
                 </span>
             </div>
         </div>
@@ -115,7 +115,7 @@ echo $styleCss . "\n" . $faCss;
         <div class="container header-container">
             <!-- Logo Institucional -->
             <a href="<?= BASE_URL ?>/" class="site-logo" title="<?= SITE_NAME ?> - Inicio">
-                <img src="<?= BASE_URL ?>/assets/img/logotipo.webp" alt="Logotipo Prodoral Chile - Sellado de Fugas de Gas" width="180" height="60" fetchpriority="high">
+                <img src="<?= BASE_URL ?>/assets/img/logotipo.webp" alt="Logotipo Prodoral Chile - Sellado de Fugas de Gas" width="96" height="120" fetchpriority="high">
                 <div class="logo-text">
                     <span class="logo-title">PRODORAL CHILE</span>
                     <span class="logo-subtitle">Gasfiter Certificado SEC • Prodoral R6-1</span>
@@ -154,7 +154,7 @@ echo $styleCss . "\n" . $faCss;
         <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true" inert>
             <div class="drawer-header">
                 <div class="drawer-brand">
-                    <img src="<?= BASE_URL ?>/assets/img/logotipo.webp" alt="Prodoral Chile" class="drawer-logo" width="130" height="42" loading="lazy">
+                    <img src="<?= BASE_URL ?>/assets/img/logotipo.webp" alt="Prodoral Chile" class="drawer-logo" width="96" height="120" loading="lazy">
                     <span class="drawer-sec-tag"><i class="fa-solid fa-shield-halved"></i> SEC Clase 3</span>
                 </div>
                 <button type="button" class="drawer-close-btn" id="mobileDrawerClose" aria-label="Cerrar menú">

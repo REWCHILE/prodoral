@@ -25,6 +25,12 @@ define('EXPERT_CHILEVALORA', 'Certificación Oficial de Competencias Laborales e
 define('EXPERT_EXP_YEARS', '40+ Años');
 define('SEC_LICENSE_URL', 'https://wlhttp.sec.cl/rnii/public/licencia/qr?o=285eb263edf5cb049f3f4cc7fa0d2182');
 
+// Garantía y Durabilidad Oficiales
+define('WARRANTY_YEARS', '3 Años de Garantía Escrita');
+define('WARRANTY_SUMMARY', 'Garantía legal y técnica por escrito de 3 años por efectos de sellado.');
+define('DURABILITY_YEARS', 'Duración Indefinida (+30 Años)');
+define('DURABILITY_SUMMARY', 'Duración indefinida comprobada con una vida útil superior a 30 años sin degradación ni pérdida de hermeticidad.');
+
 // Horarios de Atención
 define('SCHEDULE_WEEKDAYS', 'Lunes a Viernes: 08:30 a 20:00 hrs');
 define('SCHEDULE_SATURDAY', 'Sábados: 09:00 a 16:00 hrs');
