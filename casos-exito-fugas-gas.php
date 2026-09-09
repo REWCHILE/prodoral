@@ -5,10 +5,10 @@
 
 require_once __DIR__ . '/includes/config.php';
 
-$pageTitle = 'Casos Reales y Proyectos de Sellado de Fugas de Gas con Prodoral R6-1';
-$pageDesc = 'Vea casos de éxito reales, videos en terreno y fotografías de sellado de fugas de gas sin romper muros realizados por Domingo Isain Plaza Caamaño en Chile.';
+$pageTitle = 'Casos Reales de Sellado de Gas | 📞 9 4987 7316 | Evidencia en Terreno';
+$pageDesc = '📞 Consulte su caso al +56 9 4987 7316. Fotos y videos reales de sellado con Prodoral R6-1 en casas y edificios de Santiago. Solución definitiva sin picar ni demoler.';
 $pageSlug = 'casos-exito-fugas-gas';
-$ogImage = BASE_URL . '/assets/img/prodoral-r6-1-sellado-fugas-gas-santiago.png';
+$ogImage = BASE_URL . '/assets/img/og-prodoral-social.jpg';
 
 require_once __DIR__ . '/includes/header.php';
 ?><main id="main-content">

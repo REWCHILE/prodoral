@@ -5,10 +5,10 @@
 
 require_once __DIR__ . '/includes/config.php';
 
-$pageTitle = 'Sobre Nosotros | Gasfiter Certificado SEC Especialista en Prodoral R6-1';
-$pageDesc = 'Conozca la trayectoria de Domingo Isain Plaza Caamaño, Gasfiter Certificado SEC con más de 40 años de experiencia y pionero en Chile en la aplicación del sellante alemán Prodoral R6-1.';
+$pageTitle = 'Gasfiter SEC Domingo Plaza | 📞 9 4987 7316 | Prodoral Chile 40+ Años';
+$pageDesc = '📞 Contacto directo: +56 9 4987 7316. Domingo Isain Plaza Caamaño, Gasfiter Autorizado Clase 3 SEC. Más de 40 años de experiencia en gas y sellado alemán Prodoral R6-1.';
 $pageSlug = 'prodoral-chile';
-$ogImage = BASE_URL . '/assets/img/SEC-DOMINGO.webp';
+$ogImage = BASE_URL . '/assets/img/og-prodoral-social.jpg';
 
 require_once __DIR__ . '/includes/header.php';
 ?>

@@ -8,8 +8,8 @@ function get_all_pages_data() {
     return [
         'prodoral-r6-1' => [
             'keyword' => 'Prodoral R6-1',
-            'title' => 'Prodoral R6-1 Chile | Sellante Alemán de Fugas de Gas Sin Romper',
-            'meta_desc' => 'Ficha técnica de Prodoral R6-1 en Chile. Sellante polimérico alemán certificado DIN-DVGW para sellar microfugas en cañerías de gas sin romper muros. Instalador SEC.',
+            'title' => 'Prodoral R6-1 Ficha Técnica Chile | 📞 9 4987 7316 | Sellante SEC',
+            'meta_desc' => '📞 Asesoría y pedidos al +56 9 4987 7316. Ficha técnica de Prodoral R6-1 en Chile. Sellante polimérico alemán DIN-DVGW para sellar cañerías sin picar. Gasfiter SEC.',
             'h1' => 'Prodoral R6-1: El Sellante Alemán para Fugas de Gas Sin Romper',
             'subtitle' => 'Dispersión polimérica certificada bajo norma europea DIN EN 13090 y DVGW G 624 para sellado interno de cañerías de gas natural y GLP.',
             'badge' => 'Ficha Técnica Oficial • TIB Chemicals Alemania',
@@ -37,8 +37,8 @@ function get_all_pages_data() {
 
         'prodoral-h' => [
             'keyword' => 'Prodoral H calefacción',
-            'title' => 'Prodoral H Chile | Sellante para Fugas en Calefacción y Losa Radiante',
-            'meta_desc' => 'Repare fugas en circuitos cerrados de calefacción, radiadores y losa radiante sin romper pisos con Prodoral H en Chile. Aplicación profesional garantizada.',
+            'title' => 'Prodoral H Calefacción y Losa Radiante | 📞 9 4987 7316 | Chile',
+            'meta_desc' => '📞 Cotice al +56 9 4987 7316. Repare fugas en losa radiante y circuitos de calefacción sin romper pisos con Prodoral H en Chile. Aplicación profesional garantizada.',
             'h1' => 'Prodoral H: Sellado de Fugas en Calefacción y Losas Radiantes',
             'subtitle' => 'La solución química alemana que sella pérdidas de agua y caídas de presión en calderas y radiadores sin abrir pisos ni parqués.',
             'badge' => 'Sistemas Hidrónicos • Calefacción Central',
@@ -66,8 +66,8 @@ function get_all_pages_data() {
 
         'precio-reparar-fuga-de-gas-chile' => [
             'keyword' => 'Precio reparar fuga de gas chile',
-            'title' => 'Precio de Reparar Fuga de Gas en Chile | Costos con Prodoral R6-1',
-            'meta_desc' => '¿Cuánto cuesta reparar una fuga de gas en Chile? Compare el costo de picar muros vs el sellado no invasivo con Prodoral R6-1. Ahorre hasta 70% con Gasfiter SEC.',
+            'title' => 'Precio Reparar Fuga de Gas Chile | 📞 9 4987 7316 | Ahorre 70% Sin Romper',
+            'meta_desc' => '📞 Presupuesto directo al +56 9 4987 7316. ¿Cuánto cuesta reparar una fuga de gas en Chile? Compare picar muros vs sellar con Prodoral R6-1. Ahorre hasta 70% con Gasfiter SEC.',
             'h1' => 'Precio de Reparar una Fuga de Gas en Chile: ¿Cuánto Cuesta con Prodoral R6-1?',
             'subtitle' => 'Guía de precios, factores que determinan el presupuesto y comparativa real frente al costo destructivo de romper muros y pisos.',
             'badge' => 'Precios Claros • Ahorro Garantizado de hasta 70%',
@@ -95,8 +95,8 @@ function get_all_pages_data() {
 
         'senales-fuga-de-gas-casa' => [
             'keyword' => 'Señales fuga de gas casa',
-            'title' => '5 Señales de una Fuga de Gas en Casa y Qué Hacer de Inmediato',
-            'meta_desc' => 'Aprenda a detectar a tiempo una fuga de gas en su hogar. Síntomas, olor a mercaptano, medidor corriendo y protocolo de emergencia con Gasfiter SEC en Chile.',
+            'title' => '5 Señales de Fuga de Gas en Casa | 📞 9 4987 7316 | Urgencias SEC 24/7',
+            'meta_desc' => '📞 Ante olor a gas o medidor corriendo llame al +56 9 4987 7316. Protocolo de emergencia, detección de microfugas y sellado con Gasfiter Autorizado SEC en Chile.',
             'h1' => '5 Señales Clave de una Fuga de Gas en Casa y Cómo Actuar',
             'subtitle' => 'Detectar una pérdida de gas a tiempo previene accidentes graves, cortes de suministro y clausuras por Sello Rojo de la SEC.',
             'badge' => 'Guía de Seguridad y Emergencias • Prevención SEC',
@@ -124,8 +124,8 @@ function get_all_pages_data() {
 
         'sellar-fugas-de-gas-sin-romper-paredes' => [
             'keyword' => 'Sellar fugas de gas sin romper paredes',
-            'title' => 'Cómo Sellar Fugas de Gas Sin Romper Paredes ni Pisos en Chile',
-            'meta_desc' => 'Reparación limpia y no destructiva de fugas de gas embutidas en paredes y losas con Prodoral R6-1. Acreditación SEC oficial en Santiago y regiones.',
+            'title' => 'Sellar Fugas de Gas Sin Romper Paredes | 📞 9 4987 7316 | Prodoral Chile',
+            'meta_desc' => '📞 Llámenos al +56 9 4987 7316. Reparación limpia y no invasiva de cañerías embutidas en muros y losas con Prodoral R6-1 alemán. Sello Verde y garantía 3 años SEC.',
             'h1' => 'Cómo Sellar Fugas de Gas Sin Romper Paredes, Cerámicos ni Losas',
             'subtitle' => 'Descubra la técnica de inyección polimérica alemana que repara microfugas en cañerías interiores en menos de 24 horas.',
             'badge' => 'Tecnología No Destructiva • Sello Verde SEC',
@@ -153,8 +153,8 @@ function get_all_pages_data() {
 
         'gasfiter-certificado-sec-en-gas-y-en-prodoral' => [
             'keyword' => 'Gasfiter certificado SEC en gas y en prodoral',
-            'title' => 'Gasfiter Certificado SEC Especialista en Prodoral R6-1 | Domingo Plaza',
-            'meta_desc' => 'Contrate a Domingo Isain Plaza Caamaño, Gasfiter Certificado SEC y acreditado ChileValora. Más de 40 años de experiencia y especialista en Prodoral R6-1 en Chile.',
+            'title' => 'Gasfiter Certificado SEC Domingo Plaza | 📞 9 4987 7316 | Sello Verde',
+            'meta_desc' => '📞 Llame directo a Domingo Plaza: +56 9 4987 7316. Gasfiter Autorizado Clase 3 SEC y ChileValora con más de 40 años de experiencia y especialista en Prodoral R6-1.',
             'h1' => 'Gasfiter Certificado SEC Especialista en Gas y en Prodoral R6-1',
             'subtitle' => 'Domingo Isain Plaza Caamaño: Trayectoria, credenciales oficiales, certificación de competencias y garantía técnica en toda la Región Metropolitana y regiones.',
             'badge' => 'Registro Oficial SEC • ChileValora • TIB Chemicals',
@@ -182,8 +182,8 @@ function get_all_pages_data() {
 
         'sellar-fuga-de-gas-con-prodoral' => [
             'keyword' => 'Sellar fuga de gas con prodoral',
-            'title' => 'Sellar Fuga de Gas con Prodoral R6-1 | Reparación Definitiva Sin Romper',
-            'meta_desc' => 'Servicio técnico especializado para sellar fugas de gas con Prodoral R6-1. Sin picar muros ni pisos. Atención por Domingo Plaza, Gasfiter Certificado SEC.',
+            'title' => 'Sellar Fuga de Gas con Prodoral R6-1 | 📞 9 4987 7316 | Servicio 24/7',
+            'meta_desc' => '📞 Urgencias 24/7 al +56 9 4987 7316. Servicio técnico especializado para sellar fugas de gas sin picar muros ni pisos. Prueba a 150 mbar por Domingo Plaza SEC.',
             'h1' => 'Sellar Fuga de Gas con Prodoral R6-1: Reparación Definitiva',
             'subtitle' => 'Recupere la hermeticidad de su red de gas en un solo día, sin escombros y con certificación oficial ante la SEC.',
             'badge' => 'Servicio Certificado • Atención Rápida',

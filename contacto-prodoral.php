@@ -5,10 +5,10 @@
 
 require_once __DIR__ . '/includes/config.php';
 
-$pageTitle = 'Contacto Prodoral | Solicite Evaluación Urgente de Fuga de Gas SEC';
-$pageDesc = 'Comuníquese directamente con Domingo Isain Plaza Caamaño, Gasfiter Certificado SEC. Atención de fugas de gas y cortes de suministro en Santiago y regiones.';
+$pageTitle = 'Urgencias Gas 24/7 | 📞 9 4987 7316 | Domingo Plaza Gasfiter SEC';
+$pageDesc = '📞 Atención inmediata 24/7: +56 9 4987 7316. Contacte a Domingo Plaza, Gasfiter Certificado SEC. Recuperación de Sello Verde y sellado de gas sin romper.';
 $pageSlug = 'contacto-prodoral';
-$ogImage = BASE_URL . '/assets/img/SEC-DOMINGO.png';
+$ogImage = BASE_URL . '/assets/img/og-prodoral-social.jpg';
 
 $formSent = false;
 $formError = '';

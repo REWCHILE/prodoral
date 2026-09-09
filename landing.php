@@ -37,7 +37,7 @@ $pageData['slug'] = $slug;
 $pageTitle = $pageData['title'];
 $pageDesc = $pageData['meta_desc'];
 $pageSlug = $slug;
-$ogImage = BASE_URL . '/assets/img/' . $pageData['image'];
+$ogImage = BASE_URL . '/assets/img/og-prodoral-social.jpg';
 
 $faqs = $pageData['faqs'];
 $jsonLdSchema = get_main_schemas($faqs, $pageData);

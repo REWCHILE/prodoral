@@ -10,7 +10,7 @@ $pageTitle = $pageTitle ?? 'Prodoral Chile | Sellado de Fugas de Gas Sin Romper 
 $pageDesc = $pageDesc ?? 'Servicio especializado de sellado de fugas de gas con Prodoral R6-1. Reparación sin romper muros ni pisos por Domingo Isain Plaza Caamaño, Gasfiter Certificado SEC.';
 $pageSlug = $pageSlug ?? '';
 $canonicalUrl = get_canonical_url($pageSlug);
-$ogImage = $ogImage ?? BASE_URL . '/assets/img/prodoral-r6-1-sellado-fugas-gas-chile.png';
+$ogImage = $ogImage ?? BASE_URL . '/assets/img/og-prodoral-social.jpg';
 $jsonLdSchema = $jsonLdSchema ?? get_main_schemas(get_homepage_faqs());
 ?>
 <!DOCTYPE html>
@@ -26,7 +26,7 @@ $jsonLdSchema = $jsonLdSchema ?? get_main_schemas(get_homepage_faqs());
     <link rel="canonical" href="<?= htmlspecialchars($canonicalUrl) ?>">
     <meta name="google-site-verification" content="Rmp0j8cr3Pu3CeW1UJicCxNUbHGNdOmFqStnRPrYubs">
     
-    <!-- Open Graph / Redes Sociales -->
+    <!-- Open Graph / Redes Sociales (Facebook Sharing Debugger & WhatsApp) -->
     <meta property="og:locale" content="es_CL">
     <meta property="og:type" content="website">
     <meta property="og:title" content="<?= htmlspecialchars($pageTitle) ?>">
@@ -34,14 +34,21 @@ $jsonLdSchema = $jsonLdSchema ?? get_main_schemas(get_homepage_faqs());
     <meta property="og:url" content="<?= htmlspecialchars($canonicalUrl) ?>">
     <meta property="og:site_name" content="<?= htmlspecialchars(SITE_NAME) ?>">
     <meta property="og:image" content="<?= htmlspecialchars($ogImage) ?>">
+    <meta property="og:image:secure_url" content="<?= htmlspecialchars($ogImage) ?>">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="Prodoral Chile - Sellado de Fugas de Gas Sin Romper • Urgencias <?= PHONE_DISPLAY ?>">
     
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="<?= htmlspecialchars($pageTitle) ?>">
     <meta name="twitter:description" content="<?= htmlspecialchars($pageDesc) ?>">
     <meta name="twitter:image" content="<?= htmlspecialchars($ogImage) ?>">
-    <meta name="twitter:label1" content="Especialista SEC">
-    <meta name="twitter:data1" content="<?= htmlspecialchars(EXPERT_NAME) ?>">
+    <meta name="twitter:label1" content="Teléfono Urgencias">
+    <meta name="twitter:data1" content="<?= PHONE_DISPLAY ?>">
+    <meta name="twitter:label2" content="Especialista SEC">
+    <meta name="twitter:data2" content="<?= htmlspecialchars(EXPERT_NAME) ?>">
 
     <!-- Favicon -->
     <link rel="icon" type="image/webp" href="<?= BASE_URL ?>/assets/img/logotipo.webp">

@@ -7,10 +7,10 @@
 require_once __DIR__ . '/includes/config.php';
 require_once __DIR__ . '/includes/schemas.php';
 
-$pageTitle = 'Prodoral Chile | Sellado de Fugas de Gas Sin Romper con Prodoral R6-1';
-$pageDesc = 'Servicio profesional de sellado de fugas de gas con Prodoral R6-1. Reparación sin romper muros ni pisos. Atención en Santiago y regiones por Domingo Isain Plaza Caamaño, Gasfiter Certificado SEC.';
+$pageTitle = 'Sellado de Fugas de Gas Sin Romper | 📞 9 4987 7316 | Prodoral Chile SEC';
+$pageDesc = '📞 Llama al +56 9 4987 7316. Sellado definitivo de fugas de gas sin picar muros ni pisos con Prodoral R6-1 alemán. Garantía 3 Años SEC. Urgencias 24/7 en Santiago y regiones.';
 $pageSlug = '';
-$ogImage = BASE_URL . '/assets/img/prodoral-r6-1-sellado-fugas-gas-chile.png';
+$ogImage = BASE_URL . '/assets/img/og-prodoral-social.jpg';
 
 $faqs = get_homepage_faqs();
 $jsonLdSchema = get_main_schemas($faqs);

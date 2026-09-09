@@ -5,10 +5,10 @@
 
 require_once __DIR__ . '/includes/config.php';
 
-$pageTitle = 'Servicios de Sellado de Fugas de Gas con Prodoral R6-1 Sin Romper';
-$pageDesc = 'Servicios especializados en sellado de fugas de gas sin romper muros con Prodoral R6-1, detección instrumental con manómetro y sellado de calefacción con Prodoral H en Chile.';
+$pageTitle = 'Servicios Sellado de Gas Sin Romper | 📞 9 4987 7316 | Prodoral Chile';
+$pageDesc = '📞 Urgencias y cotizaciones al +56 9 4987 7316. Sellado de gas sin romper muros, pruebas de hermeticidad a 150 mbar y calefacción Prodoral H. Garantía escrita 3 años.';
 $pageSlug = 'sellado-de-fugas-de-gas';
-$ogImage = BASE_URL . '/assets/img/prodoral-r6-1-sellado-fugas-gas-chile.png';
+$ogImage = BASE_URL . '/assets/img/og-prodoral-social.jpg';
 
 require_once __DIR__ . '/includes/header.php';
 ?>
