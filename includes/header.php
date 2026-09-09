@@ -24,6 +24,7 @@ $jsonLdSchema = $jsonLdSchema ?? get_main_schemas(get_homepage_faqs());
     <meta name="description" content="<?= htmlspecialchars($pageDesc) ?>">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <link rel="canonical" href="<?= htmlspecialchars($canonicalUrl) ?>">
+    <meta name="google-site-verification" content="Rmp0j8cr3Pu3CeW1UJicCxNUbHGNdOmFqStnRPrYubs">
     
     <!-- Open Graph / Redes Sociales -->
     <meta property="og:locale" content="es_CL">
