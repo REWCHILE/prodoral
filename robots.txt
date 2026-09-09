@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Archivos Técnicos y de Inteligencia Artificial
+# Contexto LLMs: https://prodoral.cl/llms.txt
+
+# Mapa del Sitio XML
+Sitemap: https://prodoral.cl/sitemap.xml

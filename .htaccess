@@ -1,0 +1,66 @@
+# ==========================================================================
+# PRODORAL CHILE - CONFIGURACIÓN APACHE / .HTACCESS
+# URLs Limpias sin extensión .php, Seguridad y Optimización SEO
+# ==========================================================================
+
+# 1. Seguridad Básica & Codificación
+Options -Indexes
+AddDefaultCharset UTF-8
+
+# 2. Motor de Reescritura
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Evitar bucles en archivos existentes
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # Redirigir solicitudes con terminación .php a la versión limpia (SEO Canonical)
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
+    RewriteRule ^ %1 [R=301,L]
+
+    # Alias y Rutas Canónicas Especiales
+    RewriteRule ^nosotros/?$ prodoral-chile.php [NC,L]
+    RewriteRule ^prodoral-chile/?$ prodoral-chile.php [NC,L]
+
+    RewriteRule ^servicios/?$ sellado-de-fugas-de-gas.php [NC,L]
+    RewriteRule ^sellado-de-fugas-de-gas/?$ sellado-de-fugas-de-gas.php [NC,L]
+
+    RewriteRule ^proyectos/?$ casos-exito-fugas-gas.php [NC,L]
+    RewriteRule ^casos-exito-fugas-gas/?$ casos-exito-fugas-gas.php [NC,L]
+
+    RewriteRule ^contacto/?$ contacto-prodoral.php [NC,L]
+    RewriteRule ^contacto-prodoral/?$ contacto-prodoral.php [NC,L]
+
+    # Regla Genérica para cualquier archivo .php existente consultado sin extensión
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^(.*)/?$ $1.php [L]
+
+    # Regla para Landing Pages SEO de Fugas de Gas y Prodoral
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^([a-zA-Z0-9_-]+)/?$ landing.php [QSA,L]
+
+    # Página de inicio si se solicita /inicio
+    RewriteRule ^inicio/?$ index.php [NC,L]
+</IfModule>
+
+# 3. Compresión Gzip para Rendimiento y Velocidad de Carga
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json application/xml
+</IfModule>
+
+# 4. Caché de Navegador para Recursos Estáticos
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType text/css "access plus 1 month"
+    ExpiresByType application/javascript "access plus 1 month"
+    ExpiresByType video/mp4 "access plus 1 year"
+</IfModule>
