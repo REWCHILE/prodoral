@@ -47,18 +47,13 @@ $jsonLdSchema = $jsonLdSchema ?? get_main_schemas(get_homepage_faqs());
     <link rel="apple-touch-icon" href="<?= BASE_URL ?>/assets/img/logotipo.webp">
     <meta name="theme-color" content="#064e3b">
 
-    <!-- Preconnect Orígenes Críticos -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <!-- Preload de Fuentes Locales Críticas (Zero External CDN) -->
+    <link rel="preload" href="<?= BASE_URL ?>/assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="<?= BASE_URL ?>/assets/fonts/outfit.woff2" as="font" type="font/woff2" crossorigin>
 
-    <!-- Google Fonts con Font-Display Swap y Carga Optimizada -->
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@600;700;800&display=swap"></noscript>
-
-    <!-- Iconos FontAwesome No Bloqueante -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+    <!-- Iconos FontAwesome Locales Ultralivianos (3 KB vs 289 KB de CDN) -->
+    <link rel="preload" href="<?= BASE_URL ?>/assets/css/fontawesome.min.css?v=<?= filemtime(__DIR__ . '/../assets/css/fontawesome.min.css') ?: time() ?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="<?= BASE_URL ?>/assets/css/fontawesome.min.css"></noscript>
 
     <!-- Preload del Elemento LCP Crítico para Móvil (Fondo Hero) -->
     <link rel="preload" as="image" href="<?= BASE_URL ?>/assets/img/background-sellante-fugas-prodoral-chile.webp" fetchpriority="high">
@@ -107,7 +102,7 @@ $jsonLdSchema = $jsonLdSchema ?? get_main_schemas(get_homepage_faqs());
                     <i class="fa-solid fa-certificate"></i>
                     <span>Licencia SEC</span>
                 </a>
-                <a href="<?= PRODORAL_PDF_URL ?>" target="_blank" rel="noopener noreferrer" class="top-bar-link d-none-mobile" style="color: #93c5fd; font-weight: 600;" title="Descargar Ficha Técnica Oficial de Prodoral R6-1 en PDF">
+                <a href="<?= PRODORAL_PDF_URL ?>" target="_blank" rel="noopener noreferrer" class="top-bar-link d-none-mobile" style="color: var(--text-white); font-weight: 600;" title="Descargar Ficha Técnica Oficial de Prodoral R6-1 en PDF">
                     <i class="fa-solid fa-file-pdf" style="color: #f87171;"></i>
                     <span>Ficha Técnica PDF</span>
                 </a>

@@ -3,6 +3,25 @@
    Especialistas en Sellado de Fugas de Gas con Prodoral R6-1
    ========================================================================== */
 
+/* 0. Tipografías Locales (Zero CDN, font-display: swap) */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url('../fonts/inter.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    font-style: normal;
+    font-weight: 600 800;
+    font-display: swap;
+    src: url('../fonts/outfit.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 /* 1. Variables de Diseño & Paleta de Color */
 :root {
     --primary: #059669;          /* Verde Prodoral R6-1 */
@@ -1705,8 +1724,8 @@ body.menu-open .floating-whatsapp-wrap {
     gap: 5px;
     width: 100%;
     margin-top: 6px;
-    padding: 6px 10px;
-    background: #0284c7;
+    padding: 7px 10px;
+    background: #0369a1;
     color: #ffffff;
     font-size: 0.75rem;
     font-weight: 700;
@@ -1716,7 +1735,7 @@ body.menu-open .floating-whatsapp-wrap {
 }
 
 .sec-qr-direct-btn:hover {
-    background: #0369a1;
+    background: #0c4a6e;
     color: #ffffff;
 }
 

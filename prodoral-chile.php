@@ -76,7 +76,7 @@ require_once __DIR__ . '/includes/header.php';
                             </a>
                         </div>
                         <span class="chip" style="background: rgba(16, 185, 129, 0.2); color: var(--primary-light); border-color: var(--primary);">
-                            <i class="fa-solid fa-shield-check"></i> Credencial SEC Verificada y Activa
+                            <i class="fa-solid fa-shield-halved"></i> Credencial SEC Verificada y Activa
                         </span>
                     </div>
                 </div>
