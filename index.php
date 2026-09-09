@@ -7,8 +7,8 @@
 require_once __DIR__ . '/includes/config.php';
 require_once __DIR__ . '/includes/schemas.php';
 
-$pageTitle = 'Sellado de Fugas de Gas Sin Romper | 📞 9 4987 7316 | Prodoral Chile SEC';
-$pageDesc = '📞 Llama al +56 9 4987 7316. Sellado definitivo de fugas de gas sin picar muros ni pisos con Prodoral R6-1 alemán. Garantía 3 Años SEC. Urgencias 24/7 en Santiago y regiones.';
+$pageTitle = 'Fugas de Gas Sin Romper | 📞 9 4987 7316 | Prodoral SEC';
+$pageDesc = '📞 Llama al +56 9 4987 7316. Sellado de gas sin picar muros con Prodoral R6-1. Garantía 3 Años SEC. Urgencias 24/7 en Santiago y regiones.';
 $pageSlug = '';
 $ogImage = BASE_URL . '/assets/img/og-prodoral-social.jpg';
 
@@ -96,7 +96,7 @@ require_once __DIR__ . '/includes/header.php';
                     <img src="<?= EXPERT_PHOTO_URL ?>" alt="Domingo Isain Plaza Caamaño - Gasfiter Certificado SEC" class="hero-expert-img" width="160" height="160" fetchpriority="high">
                     <span class="hero-expert-online-dot" title="Domingo Plaza disponible para emergencias de gas"></span>
                 </div>
-                <h2 class="hero-expert-name"><?= EXPERT_NAME ?></h2>
+                <strong class="hero-expert-name" style="display: block; font-size: 1.5rem;"><?= EXPERT_NAME ?></strong>
                 <p class="hero-expert-title"><?= EXPERT_TITLE ?></p>
                 <div class="hero-expert-chips">
                     <span class="chip" style="background: rgba(16, 185, 129, 0.18); border-color: rgba(16, 185, 129, 0.45); color: #34d399; font-weight: 700;"><i class="fa-solid fa-shield-halved"></i> Garantía 3 Años por Escrito</span>
@@ -108,16 +108,16 @@ require_once __DIR__ . '/includes/header.php';
                 <!-- Botón Oficial de Verificación SEC -->
                 <a href="<?= SEC_LICENSE_URL ?>" target="_blank" rel="noopener noreferrer" class="btn btn-sec-license" title="Abrir y verificar la licencia oficial de Domingo Plaza en el portal de la SEC">
                     <i class="fa-solid fa-shield-halved"></i>
-                    <span>Verificar Licencia Oficial SEC</span>
+                    <span>Validar Licencia SEC en Portal Oficial</span>
                     <i class="fa-solid fa-arrow-up-right-from-square sec-ext-icon"></i>
                 </a>
 
                 <div class="hero-card-actions-grid">
                     <a href="tel:<?= PHONE_RAW ?>" class="btn btn-emergency pulse-btn" title="Llamar a Domingo Plaza">
-                        <i class="fa-solid fa-phone"></i> Llamar Directo
+                        <i class="fa-solid fa-phone"></i> Llamar al Técnico
                     </a>
                     <a href="<?= WHATSAPP_URL ?>" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp" title="WhatsApp con Domingo Plaza">
-                        <i class="fa-brands fa-whatsapp"></i> WhatsApp SEC
+                        <i class="fa-brands fa-whatsapp"></i> WhatsApp con Experto
                     </a>
                 </div>
             </div>
@@ -191,7 +191,7 @@ require_once __DIR__ . '/includes/header.php';
                         <div class="feature-item">
                             <div class="feature-icon-wrap" style="background: rgba(16, 185, 129, 0.15); color: #10b981;"><i class="fa-solid fa-shield-halved"></i></div>
                             <div class="feature-text">
-                                <h3>Garantía Escrita de 3 Años y Duración Indefinida (+30 Años)</h3>
+                                <h3>Respaldo y Durabilidad: 3 Años de Garantía Escrita (+30 Años de Vida Útil)</h3>
                                 <p>Cada servicio de sellado incluye <strong>Garantía Formal por Escrito de 3 Años</strong> por efectos de sellado. Su formulación alemana no se degrada en contacto con el gas y tiene una <strong>durabilidad comprobada superior a 30 años</strong> en redes interiores.</p>
                             </div>
                         </div>
@@ -350,7 +350,7 @@ require_once __DIR__ . '/includes/header.php';
                 <article class="point-card">
                     <div class="point-number">10</div>
                     <div class="point-content">
-                        <h3>Garantía Escrita de 3 Años y Duración Indefinida (+30 Años)</h3>
+                        <h3>Garantía Legal Escrita y Regularización con Sello Verde SEC</h3>
                         <p>Cada trabajo cuenta con garantía legal y técnica por escrito de 3 años por efectos de sellado. Además, el polímero alemán posee una vida útil indefinida superior a 30 años sin degradación, permitiendo recuperar de inmediato el Sello Verde de la SEC tras cortes de Metrogas, Lipigas, Abastible o Gasco.</p>
                     </div>
                 </article>
@@ -390,7 +390,7 @@ require_once __DIR__ . '/includes/header.php';
                     <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.4); color: var(--accent-gold); padding: 5px 14px; border-radius: 20px; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; margin-bottom: 12px;">
                         <i class="fa-solid fa-award"></i> Respaldo Técnico y Firma Autorizada SEC
                     </div>
-                    <h3><?= EXPERT_NAME ?></h3>
+                    <h3 class="profile-name-title">Compromiso Técnico de <?= EXPERT_NAME ?></h3>
                     <span class="role"><?= EXPERT_TITLE ?></span>
                     <p>
                         "En más de cuatro décadas de oficio, he visto a cientos de propietarios angustiados porque les dijeron que para reparar una fuga de gas debían romper toda su casa. Con el método Prodoral R6-1 recuperamos la estanqueidad total de las cañerías en un solo día, con respaldo normativo SEC y sin destruir un solo muro."
@@ -413,7 +413,7 @@ require_once __DIR__ . '/includes/header.php';
 
                     <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 20px;">
                         <a href="<?= SEC_LICENSE_URL ?>" target="_blank" rel="noopener noreferrer" class="btn btn-sec-license" style="width: auto; padding: 10px 18px;" title="Verificar licencia de instalador en el portal oficial de la SEC">
-                            <i class="fa-solid fa-shield-halved"></i> Verificar Licencia SEC en Portal Oficial
+                            <i class="fa-solid fa-shield-halved"></i> Consultar Registro Público SEC
                         </a>
                         <a href="<?= PRODORAL_PDF_URL ?>" target="_blank" rel="noopener noreferrer" class="btn btn-outline-white" style="border-color: rgba(255,255,255,0.3); font-size: 0.9rem; padding: 10px 18px;" title="Descargar Ficha Técnica Prodoral en PDF">
                             <i class="fa-solid fa-file-pdf" style="color: #f87171;"></i> Ficha Técnica Prodoral (PDF)
@@ -421,7 +421,7 @@ require_once __DIR__ . '/includes/header.php';
                     </div>
                     <div style="display: flex; gap: 14px; flex-wrap: wrap;">
                         <a href="tel:<?= PHONE_RAW ?>" class="btn btn-emergency">
-                            <i class="fa-solid fa-phone"></i> Llamar al <?= PHONE_DISPLAY ?>
+                            <i class="fa-solid fa-phone"></i> Contactar a Domingo Plaza
                         </a>
                         <a href="<?= WHATSAPP_URL ?>" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
                             <i class="fa-brands fa-whatsapp"></i> Hablar por WhatsApp Directo
@@ -669,10 +669,10 @@ require_once __DIR__ . '/includes/header.php';
                 </p>
                 <div class="cta-banner-buttons">
                     <a href="tel:<?= PHONE_RAW ?>" class="btn btn-emergency pulse-btn">
-                        <i class="fa-solid fa-phone-volume"></i> Llamar al <?= PHONE_DISPLAY ?>
+                        <i class="fa-solid fa-phone-volume"></i> Urgencias 24/7: <?= PHONE_DISPLAY ?>
                     </a>
                     <a href="<?= WHATSAPP_URL ?>" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
-                        <i class="fa-brands fa-whatsapp"></i> Chatear por WhatsApp Directo
+                        <i class="fa-brands fa-whatsapp"></i> Consultar por WhatsApp Ahora
                     </a>
                 </div>
             </div>

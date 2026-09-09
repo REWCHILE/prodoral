@@ -42,7 +42,7 @@
 
                 <!-- Columna 2: Servicios Especializados -->
                 <div class="footer-col">
-                    <h3 class="footer-title">Servicios Técnicos</h3>
+                    <div class="footer-title">Servicios Técnicos</div>
                     <ul class="footer-links">
                         <li><a href="<?= BASE_URL ?>/sellado-de-fugas-de-gas"><i class="fa-solid fa-chevron-right"></i> Sellado con Prodoral R6-1</a></li>
                         <li><a href="<?= BASE_URL ?>/sellado-de-fugas-de-gas#fugas-calefaccion"><i class="fa-solid fa-chevron-right"></i> Sellado Calefacción Prodoral H</a></li>
@@ -54,7 +54,7 @@
 
                 <!-- Columna 3: Cobertura Geográfica -->
                 <div class="footer-col">
-                    <h3 class="footer-title">Cobertura en Chile</h3>
+                    <div class="footer-title">Cobertura en Chile</div>
                     <ul class="footer-links">
                         <li><a href="<?= BASE_URL ?>/contacto-prodoral"><i class="fa-solid fa-location-dot"></i> Santiago (Todas las Comunas)</a></li>
                         <li><a href="<?= BASE_URL ?>/contacto-prodoral"><i class="fa-solid fa-location-dot"></i> Providencia, Las Condes, Vitacura</a></li>
@@ -66,7 +66,7 @@
 
                 <!-- Columna 4: Contacto Directo y Urgencias -->
                 <div class="footer-col">
-                    <h3 class="footer-title">Contacto Directo</h3>
+                    <div class="footer-title">Contacto Directo</div>
                     <ul class="footer-contact-info">
                         <li>
                             <i class="fa-solid fa-phone"></i>
@@ -133,13 +133,13 @@
 
     <!-- Barra Rápida Flotante en Móviles -->
     <nav class="mobile-sticky-action-bar" aria-label="Acciones rápidas en dispositivos móviles">
-        <a href="tel:<?= PHONE_RAW ?>" class="mobile-action-btn mobile-action-call">
+        <a href="tel:<?= PHONE_RAW ?>" class="mobile-action-btn mobile-action-call" title="Llamar para emergencias de gas">
             <i class="fa-solid fa-phone-flip"></i>
-            <span>Llamar Ahora</span>
+            <span>Llamar Emergencia</span>
         </a>
-        <a href="<?= WHATSAPP_URL ?>" target="_blank" rel="noopener noreferrer" class="mobile-action-btn mobile-action-wsp">
+        <a href="<?= WHATSAPP_URL ?>" target="_blank" rel="noopener noreferrer" class="mobile-action-btn mobile-action-wsp" title="Consultar por regularización y Sello Verde SEC">
             <i class="fa-brands fa-whatsapp"></i>
-            <span>WhatsApp SEC</span>
+            <span>WhatsApp Sello Verde</span>
         </a>
     </nav>
 

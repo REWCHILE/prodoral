@@ -12,14 +12,20 @@ AddDefaultCharset UTF-8
     RewriteEngine On
     RewriteBase /
 
-    # Evitar bucles en archivos existentes
+    # 1. Redirección Canónica 301: Forzar HTTPS y no-www en Producción
+    RewriteCond %{HTTPS} off [OR]
+    RewriteCond %{HTTP_HOST} ^www\. [NC]
+    RewriteCond %{HTTP_HOST} ^(?:www\.)?prodoral\.cl$ [NC]
+    RewriteRule ^ https://prodoral.cl%{REQUEST_URI} [L,R=301]
+
+    # 2. Redirigir solicitudes con terminación .php a la versión limpia (SEO Canonical)
+    RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
+    RewriteRule ^ %1 [R=301,L]
+
+    # Evitar bucles en archivos estáticos existentes (imágenes, fuentes, css, js)
     RewriteCond %{REQUEST_FILENAME} -f [OR]
     RewriteCond %{REQUEST_FILENAME} -d
     RewriteRule ^ - [L]
-
-    # Redirigir solicitudes con terminación .php a la versión limpia (SEO Canonical)
-    RewriteCond %{THE_REQUEST} ^[A-Z]{3,}\s([^.]+)\.php [NC]
-    RewriteRule ^ %1 [R=301,L]
 
     # Alias y Rutas Canónicas Especiales
     RewriteRule ^nosotros/?$ prodoral-chile.php [NC,L]

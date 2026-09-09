@@ -36,15 +36,27 @@ define('SCHEDULE_WEEKDAYS', 'Lunes a Viernes: 08:30 a 20:00 hrs');
 define('SCHEDULE_SATURDAY', 'Sábados: 09:00 a 16:00 hrs');
 define('SCHEDULE_EMERGENCY', 'Atención de Emergencias y Consultas Técnicas 24/7');
 
-// Detección Dinámica de Base URL
+// Detección Dinámica de Base URL y Redirección Canónica 301 (HTTPS y no-www obligatorios en producción)
+$host = strtolower($_SERVER['HTTP_HOST'] ?? 'localhost');
 $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https://' : 'http://';
-$host = $_SERVER['HTTP_HOST'] ?? 'localhost';
-$scriptDir = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'] ?? ''));
-$scriptDir = ($scriptDir === '/' || $scriptDir === '\\') ? '' : rtrim($scriptDir, '/');
+if (!empty($_SERVER['HTTP_X_FORWARDED_PROTO']) && $_SERVER['HTTP_X_FORWARDED_PROTO'] === 'https') {
+    $protocol = 'https://';
+}
 
 if (strpos($host, 'prodoral.cl') !== false) {
+    // Redirigir si entra por http:// o con prefijo www.
+    $isHttps = ($protocol === 'https://') || (!empty($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443);
+    $hasWww = (strpos($host, 'www.') === 0);
+    
+    if (!$isHttps || $hasWww) {
+        $uri = $_SERVER['REQUEST_URI'] ?? '/';
+        header('Location: https://prodoral.cl' . $uri, true, 301);
+        exit;
+    }
     define('BASE_URL', 'https://prodoral.cl');
 } else {
+    $scriptDir = str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'] ?? ''));
+    $scriptDir = ($scriptDir === '/' || $scriptDir === '\\') ? '' : rtrim($scriptDir, '/');
     define('BASE_URL', $protocol . $host . $scriptDir);
 }
 

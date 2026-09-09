@@ -101,11 +101,11 @@ echo $styleCss . "\n" . $faCss;
                 </a>
                 <a href="<?= WHATSAPP_URL ?>" target="_blank" rel="noopener noreferrer" class="top-bar-link top-bar-wsp" title="Consultar por WhatsApp">
                     <i class="fa-brands fa-whatsapp"></i>
-                    <span>WhatsApp</span>
+                    <span>WhatsApp 24/7</span>
                 </a>
                 <a href="<?= SEC_LICENSE_URL ?>" target="_blank" rel="noopener noreferrer" class="top-bar-link d-none-mobile" style="color: var(--accent-gold); font-weight: 700;" title="Verificar Licencia de Domingo Plaza en la SEC">
                     <i class="fa-solid fa-certificate"></i>
-                    <span>Licencia SEC</span>
+                    <span>Licencia SEC Activa</span>
                 </a>
                 <a href="<?= PRODORAL_PDF_URL ?>" target="_blank" rel="noopener noreferrer" class="top-bar-link d-none-mobile" title="Descargar Ficha Técnica Oficial de Prodoral R6-1 en PDF">
                     <i class="fa-solid fa-file-pdf" style="color: #f87171;"></i>
@@ -250,13 +250,13 @@ echo $styleCss . "\n" . $faCss;
                 </a>
 
                 <div class="drawer-actions-grid">
-                    <a href="tel:<?= PHONE_RAW ?>" class="drawer-btn drawer-btn-call">
+                    <a href="tel:<?= PHONE_RAW ?>" class="drawer-btn drawer-btn-call" title="Llamar directamente a Domingo Plaza">
                         <i class="fa-solid fa-phone-flip"></i>
-                        <span>Llamar Ahora</span>
+                        <span>Llamar Directo</span>
                     </a>
-                    <a href="<?= WHATSAPP_URL ?>" target="_blank" rel="noopener noreferrer" class="drawer-btn drawer-btn-wsp">
+                    <a href="<?= WHATSAPP_URL ?>" target="_blank" rel="noopener noreferrer" class="drawer-btn drawer-btn-wsp" title="Consultar por WhatsApp con Domingo Plaza">
                         <i class="fa-brands fa-whatsapp"></i>
-                        <span>WhatsApp SEC</span>
+                        <span>WhatsApp Domingo</span>
                     </a>
                 </div>
             </div>
